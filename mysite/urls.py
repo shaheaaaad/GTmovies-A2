@@ -20,7 +20,8 @@ from django.urls import path
 from GT_Movies_Store import views
 
 urlpatterns = [
-    #    path('admin/', admin.site.urls),
+    #path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('home/', views.home, name='home'),
+    path('MovieStore/', views.movie_list, name='movie_list'),
 ]
