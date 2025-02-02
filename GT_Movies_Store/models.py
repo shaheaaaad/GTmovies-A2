@@ -5,7 +5,7 @@ class Movie(models.Model):
     title = models.CharField(max_length=255)
     release_date = models.DateField(null=True, blank=True)
     description = models.TextField()
-    image = models.ImageField(upload_to='movie_images/', blank=True, null=True)
+    image = models.ImageField(upload_to='movie_images/', blank=True, null=True)  # ✅ Add this line
 
     class Meta:
         db_table = "MovieStore_movie"

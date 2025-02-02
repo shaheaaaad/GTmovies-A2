@@ -10,7 +10,12 @@ from GT_Movies_Store.models import Movie
 def index(request):
     return render(request, 'GT_Movies_Store/base.html')
 def home(request):
-    return render(request, 'GT_Movies_Store/home.html')
+    movies = Movie.objects.all()
+
+    paginator = Paginator(movies, 50)  # Show 10 movies per page
+    page_number = request.GET.get('page')  # Get current page from URL query params
+    page_obj = paginator.get_page(page_number)
+    return render(request, 'GT_Movies_Store/home.html', {'page_obj': page_obj})
 def login_view(request):
     return render(request, 'GT_Movies_Store/login.html')
 def about(request):

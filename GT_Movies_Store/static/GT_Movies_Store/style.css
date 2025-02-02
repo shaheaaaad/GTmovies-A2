@@ -58,6 +58,7 @@ body {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(179, 163, 105, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+
 /* Padding for Container */
 .container {
     padding: 0 2rem;
@@ -66,3 +67,117 @@ body {
 .title {
     text-align: center;
 }
+
+
+/* Movie Grid Layout */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 movies per row */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px; /* Limit max width */
+    margin: 0 auto; /* Center align */
+}
+
+
+/* Individual Movie Card */
+.movie-card {
+    background-color: #f5f5f5;
+    padding: 15px;
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+.cart-icon {
+    width: 10px;  /* Adjust to preferred size */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Prevents weird spacing */
+    margin: 0 auto; /* Center it */
+}
+/* Movie Images */
+.movie-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.movie-card .poster-image {
+    width: 100%; /* This applies ONLY to the movie poster */
+}
+/* Movie Titles */
+.movie-card h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* Responsive: Adjust grid for smaller screens */
+@media (max-width: 1024px) {
+    .movie-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .movie-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 per row (mobile) */
+    }
+}
+
+.movie-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.movie-card h3 {
+    color: #333; /* Change to dark gray */
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Optional: Change link color on hover */
+.movie-card a:hover h3 {
+    color: #B3A369; /* GT Gold */
+}
+
+.add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffc107; /* Bootstrap warning color */
+    color: black;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    width: 100%; /* Button spans full width */
+}
+
+.add-to-cart:hover {
+    background-color: #e0a800; /* Darker yellow on hover */
+}
+
+.cart-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between icon and text */
+}
+
+.cart-icon {
+    width: 24px;  /* Fixed size */
+    height: 24px;
+    object-fit: contain; /* Prevents stretching */
+}
+

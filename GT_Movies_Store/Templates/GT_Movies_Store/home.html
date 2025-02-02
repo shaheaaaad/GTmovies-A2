@@ -1,10 +1,30 @@
 {% extends "GT_Movies_Store/base.html" %}
-
+{% load static %}
 {% block title %}Home - GT Movies Store{% endblock %}
-
 {% block content %}
     <div class="title">
         <h1>Welcome to the GT Movies Store</h1>
         <p>Browse our expansive movies catalogue.</p>
     </div>
+
+    <div class="movie-grid">
+        {% for movie in page_obj %}
+            <div class="movie-card">
+                <a href="{% url 'movie' movie.id %}">
+                    <h3>{{ movie.title }} ({{ movie.release_date }})</h3>
+                    <img src="{% static 'GT_Movies_Store/movie_images/' %}{{ movie.title|slugify }}.jpg"
+                     onerror="this.onerror=null; this.src='{% static 'GT_Movies_Store/movie_images/default.jpg' %}'"
+                     alt="{{ movie.title }}" width="200" class="poster-image">
+                </a>
+
+                <!-- Add to Cart Button -->
+                <a href="{% url 'cart' %}" class="btn btn-warning add-to-cart">
+                    <img src="{% static 'GT_Movies_Store/assets/cart-icon.png' %}" class="cart-icon" alt="Cart">
+                    <span>Add to Cart</span>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+
+
 {% endblock %}
