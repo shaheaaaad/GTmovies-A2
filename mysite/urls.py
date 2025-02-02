@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path
 
 from GT_Movies_Store import views
+from GT_Movies_Store.views import logout_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -34,4 +35,8 @@ urlpatterns = [
     path('account/', views.account, name='account'),
 
     path('welcome/', views.welcome, name='welcome'),
+
+    path('logout/', logout_view, name='logout_view'),
+
+    path("<int:movie_id>/movie/", views.movie, name="movie"),
 ]

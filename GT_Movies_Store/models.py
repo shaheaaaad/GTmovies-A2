@@ -5,6 +5,7 @@ class Movie(models.Model):
     title = models.CharField(max_length=255)
     release_date = models.DateField(null=True, blank=True)
     description = models.TextField()
+    image = models.ImageField(upload_to='movie_images/', blank=True, null=True)
 
     class Meta:
         db_table = "MovieStore_movie"
@@ -13,6 +14,7 @@ class Movie(models.Model):
 class Review (models.Model):
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
     review = models.TextField()
+    author = models.CharField(max_length=255, default='Unknown Author')
 
     def __str__(self):
         return f"Review for {self.movie.title}"

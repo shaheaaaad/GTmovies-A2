@@ -5,46 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}My Website{% endblock %}</title>
-    <link rel="stylesheet" href="{% static GT_Movies_Store.style.css %}">
+
+    <!-- Bootstrap CSS (Fix Issue #2) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <!-- Custom CSS (Fix Issue #1) -->
+    <link rel="stylesheet" href="{% static 'GT_Movies_Store/style.css' %}">
+
     <style>
         body {
             font-family: Arial, sans-serif;
         }
-        .navbar {
-            background-color: #B3A369;
-        }
-        .navbar-brand {
-            color: #003057 !important;
-        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a class="navbar-brand" href="/welcome">GT Movies Store</a>
-        <div class="container" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-dark">
+    <div class="container d-flex">
+        <a class="navbar-left text-white" href="/welcome">GT Movies Store</a>
+
+        <div class="navbar-right ms-auto">
+            <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/home">Home</a>
+                    <a class="nav-link text-white" href="/home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/about">About</a>
+                    <a class="nav-link text-white" href="/about">About</a>
                 </li>
                {% if request.user.is_authenticated %}
-                    <!-- Show Cart & Account when logged in -->
                     <li class="nav-item">
                         <a href="/cart" class="btn btn-warning d-flex align-items-center">
-                            <img src="{% static 'GT_Movies_Store/assets/cart-icon.png' %}" width="20px" height="20px" alt="Cart" class="cart-icon">
+                            <img src="{% static 'GT_Movies_Store/assets/cart-icon.png' %}" width="20px" height="20px" alt="Cart">
                             <span class="ms-2">Cart</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/account">Account</a>
+                        <a class="nav-link text-white" href="/account">Account</a>
                     </li>
                 {% else %}
-                    <!-- Show Login/Register when NOT logged in -->
                     <li class="nav-item">
-                        <a class="nav-link" href="/login">Login/Register</a>
+                        <a class="nav-link text-white" href="/login">Login/Register</a>
                     </li>
                 {% endif %}
             </ul>
@@ -52,12 +53,15 @@
     </div>
 </nav>
 
-    <div class="container mt-4">
-        {% block content %}{% endblock %}
-    </div>
+<!-- Page Content -->
+<div class="container mt-4">
+    {% block content %}{% endblock %}
+</div>
 
-    <footer class="text-center mt-4 py-3">
-        <p>&copy; Alexander 2 2340 Spring2025</p>
-    </footer>
+<!-- Footer -->
+<footer class="text-center mt-4 py-3">
+    <p>&copy; Alexander 2 2340 Spring2025</p>
+</footer>
+
 </body>
 </html>

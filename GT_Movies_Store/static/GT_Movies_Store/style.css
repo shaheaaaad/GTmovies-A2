@@ -1,10 +1,33 @@
 body {
-    background-color: #003057;
+    background-color: white;
 }
 /* Navbar background */
 .navbar {
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
     background-color: #003057; /* GT Dark Blue */
 }
+
+.navbar-left {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+     margin-right: auto;
+}
+
+.navbar-right {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-right a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
 
 /* Brand Styling */
 .navbar-brand {
@@ -15,15 +38,15 @@ body {
 
 /* Link Styling */
 .nav-link {
-    color: #B3A369 !important;
+    color: #003057 !important;
     margin-right: 15px;
 }
 
 /* Hover and Active States */
 .nav-link:hover,
 .nav-link.active {
-    color: #B3A369 !important; /* GT Gold */
-    border-bottom: 2px solid #B3A369;
+    color: white !important; /* GT Gold */
+    border-bottom: 2px solid white;
 }
 
 /* Responsive Toggle Button */
@@ -38,4 +61,8 @@ body {
 /* Padding for Container */
 .container {
     padding: 0 2rem;
+}
+
+.title {
+    text-align: center;
 }
