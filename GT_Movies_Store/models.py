@@ -10,3 +10,9 @@ class Movie(models.Model):
         db_table = "MovieStore_movie"
     def __str__(self):
         return self.title
+class Review (models.Model):
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
+    review = models.TextField()
+
+    def __str__(self):
+        return f"Review for {self.movie.title}"
