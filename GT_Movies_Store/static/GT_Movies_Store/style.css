@@ -1,3 +1,41 @@
 body {
     background-color: #003057;
 }
+/* Navbar background */
+.navbar {
+    background-color: #003057; /* GT Dark Blue */
+}
+
+/* Brand Styling */
+.navbar-brand {
+    font-size: 1.5rem;
+    color: #B3A369 !important; /* GT Gold */
+    font-weight: bold;
+}
+
+/* Link Styling */
+.nav-link {
+    color: #B3A369 !important;
+    margin-right: 15px;
+}
+
+/* Hover and Active States */
+.nav-link:hover,
+.nav-link.active {
+    color: #B3A369 !important; /* GT Gold */
+    border-bottom: 2px solid #B3A369;
+}
+
+/* Responsive Toggle Button */
+.navbar-toggler {
+    border-color: #B3A369;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(179, 163, 105, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Padding for Container */
+.container {
+    padding: 0 2rem;
+}

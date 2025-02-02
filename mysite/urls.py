@@ -23,5 +23,15 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('home/', views.home, name='home'),
+
+    path('about/', views.about, name='about'),
     path('MovieStore/', views.movie_list, name='movie_list'),
+
+    path('cart/', views.cart, name='cart'),
+
+    path('login/', views.login, name='login'),
+
+    path('account/', views.account, name='account'),
+
+    path('welcome/', views.welcome, name='welcome'),
 ]
