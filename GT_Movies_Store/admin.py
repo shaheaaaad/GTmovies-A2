@@ -10,3 +10,7 @@ admin.site.register(Movie)
 from .models import Review
 
 admin.site.register(Review)
+
+from .models import Order
+
+admin.site.register(Order)
