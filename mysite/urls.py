@@ -20,6 +20,9 @@ from django.urls import path
 from GT_Movies_Store import views
 from GT_Movies_Store.views import register, login_view, logout_view
 
+from django.contrib.auth import views as auth_views
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
@@ -41,4 +44,9 @@ urlpatterns = [
     path('logout/', logout_view, name='logout_view'),
 
     path("<int:movie_id>/movie/", views.movie, name="movie"),
+
+    path('reset_password/', auth_views.PasswordResetView.as_view(), name='reset_password'),
+    path('reset_password_sent/', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'),
+    path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
+    path('reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
 ]
