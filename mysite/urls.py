@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path
 
 from GT_Movies_Store import views
-from GT_Movies_Store.views import logout_view
+from GT_Movies_Store.views import register, login_view, logout_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,7 +30,9 @@ urlpatterns = [
 
     path('cart/', views.cart, name='cart'),
 
-    path('login/', views.login, name='login'),
+    path('login/', views.login_view, name='login'),
+
+    path('register/', register, name='register'),
 
     path('account/', views.account, name='account'),
 

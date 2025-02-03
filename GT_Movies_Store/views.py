@@ -4,6 +4,8 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from GT_Movies_Store.models import Movie
+from GT_Movies_Store.forms import UserRegistrationForm
+from django.contrib.auth.forms import AuthenticationForm
 
 
 # Create your views here.
@@ -16,8 +18,32 @@ def home(request):
     page_number = request.GET.get('page')  # Get current page from URL query params
     page_obj = paginator.get_page(page_number)
     return render(request, 'GT_Movies_Store/home.html', {'page_obj': page_obj})
+
+def register(request):
+    if request.method == 'POST':
+        form = UserRegistrationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('home')
+    else:
+        form = UserRegistrationForm()
+
+    return render(request, 'GT_Movies_Store/register.html', {'form': form})
 def login_view(request):
-    return render(request, 'GT_Movies_Store/login.html')
+    if request.method == 'POST':
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('home')  # Redirect to homepage
+    else:
+        form = AuthenticationForm()
+
+    return render(request, 'GT_Movies_Store/login.html', {'form': form})
 def about(request):
     return render(request, 'GT_Movies_Store/about.html')
 def welcome(request):
