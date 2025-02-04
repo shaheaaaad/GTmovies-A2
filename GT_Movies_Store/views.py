@@ -1,24 +1,37 @@
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
-from django.http import HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
-from GT_Movies_Store.models import Movie
-from GT_Movies_Store.forms import UserRegistrationForm
 from django.contrib.auth.forms import AuthenticationForm
-from GT_Movies_Store.models import Cart, CartItem, Movie
+from django.contrib.auth.models import User
+from django.contrib import messages
+from GT_Movies_Store.models import Movie, Cart, CartItem, SecurityQuestion
+from GT_Movies_Store.forms import UserRegistrationForm, SecurityQuestionForm
 
 
-# Create your views here.
+# --------------------------- General Views ---------------------------
+
 def index(request):
     return render(request, 'GT_Movies_Store/base.html')
+
+
 def home(request):
     movies = Movie.objects.all()
-
-    paginator = Paginator(movies, 50)  # Show 10 movies per page
-    page_number = request.GET.get('page')  # Get current page from URL query params
+    paginator = Paginator(movies, 50)  # Show 50 movies per page
+    page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     return render(request, 'GT_Movies_Store/home.html', {'page_obj': page_obj})
+
+
+def about(request):
+    return render(request, 'GT_Movies_Store/about.html')
+
+
+def welcome(request):
+    return render(request, 'GT_Movies_Store/welcome.html')
+
+
+# --------------------------- Authentication Views ---------------------------
 
 def register(request):
     if request.method == 'POST':
@@ -31,6 +44,8 @@ def register(request):
         form = UserRegistrationForm()
 
     return render(request, 'GT_Movies_Store/register.html', {'form': form})
+
+
 def login_view(request):
     if request.method == 'POST':
         form = AuthenticationForm(request, data=request.POST)
@@ -40,35 +55,38 @@ def login_view(request):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('home')  # Redirect to homepage
+                return redirect('home')
     else:
         form = AuthenticationForm()
 
     return render(request, 'GT_Movies_Store/login.html', {'form': form})
-def about(request):
-    return render(request, 'GT_Movies_Store/about.html')
-def welcome(request):
-    return render(request, 'GT_Movies_Store/welcome.html')
+
+
+def logout_view(request):
+    logout(request)
+    return redirect('/home')
+
+
+# --------------------------- Movie Views ---------------------------
 
 def movie_list(request):
-
     movies = Movie.objects.all()
-
-
     paginator = Paginator(movies, 10)  # Show 10 movies per page
-    page_number = request.GET.get('page')  # Get current page from URL query params
-    page_obj = paginator.get_page(page_number)  # Get the page object
-
-    # Pass the paginated movies to the template
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
     return render(request, 'GT_Movies_Store/movie_list.html', {'page_obj': page_obj})
-@login_required(login_url='/login/')
-def cart(request):
-    return render(request, 'GT_Movies_Store/cart.html')
+
+
+def movie(request, movie_id):
+    highlighted_movie = get_object_or_404(Movie, id=movie_id)
+    return render(request, "GT_Movies_Store/movie.html", {"movie": highlighted_movie})
+
+
+# --------------------------- Cart Views ---------------------------
 
 @login_required(login_url='/login/')
 def account(request):
     return render(request, 'GT_Movies_Store/account.html')
-
 @login_required(login_url='/login/')
 def cart(request):
     cart = Cart.objects.filter(user=request.user).first()
@@ -79,6 +97,7 @@ def cart(request):
         'cart_items': cart_items,
         'cart_total': cart_total,
     })
+
 
 @login_required(login_url='/login/')
 def add_to_cart(request, movie_id):
@@ -95,17 +114,59 @@ def add_to_cart(request, movie_id):
         'success_message': 'Item added to cart successfully!'
     })
 
+
 @login_required(login_url='/login/')
 def remove_from_cart(request, item_id):
     cart_item = get_object_or_404(CartItem, id=item_id, cart__user=request.user)
     cart_item.delete()
-
     return redirect('cart')
 
-def logout_view(request):
-    logout(request)
-    return redirect('/home')
 
-def movie(request, movie_id):
-    highlighted_movie = get_object_or_404(Movie, id=movie_id)
-    return render(request, "GT_Movies_Store/movie.html", {"movie": highlighted_movie})
+# --------------------------- Security Question Setup ---------------------------
+
+@login_required
+def setup_security_question(request):
+    """Allows users to set up or update their security question."""
+    try:
+        security_question = SecurityQuestion.objects.get(user=request.user)
+    except SecurityQuestion.DoesNotExist:
+        security_question = None
+
+    if request.method == "POST":
+        form = SecurityQuestionForm(request.POST, instance=security_question)
+        if form.is_valid():
+            security_question = form.save(commit=False)
+            security_question.user = request.user
+            security_question.set_answer(form.cleaned_data["answer"])  # Hash the answer
+            security_question.save()
+            return redirect("account")
+    else:
+        form = SecurityQuestionForm(instance=security_question)
+
+    return render(request, "GT_Movies_Store/setup_security_question.html", {"form": form})
+
+
+# --------------------------- Password Reset Using Security Question ---------------------------
+
+def security_question_reset(request):
+    """Resets password using security questions instead of email."""
+    if request.method == "POST":
+        username = request.POST.get("username")
+        security_answer = request.POST.get("security_answer")
+        new_password = request.POST.get("new_password")
+
+        try:
+            user = User.objects.get(username=username)
+            security_question = SecurityQuestion.objects.get(user=user)
+
+            if security_question.check_answer(security_answer):  # Verifies hashed answer
+                user.set_password(new_password)  # Updates password securely
+                user.save()
+                messages.success(request, "Password updated successfully! You can now log in.")
+                return redirect("login")
+            else:
+                messages.error(request, "Incorrect security answer.")
+        except (User.DoesNotExist, SecurityQuestion.DoesNotExist):
+            messages.error(request, "User or security question not found.")
+
+    return render(request, "GT_Movies_Store/security_question_reset.html")

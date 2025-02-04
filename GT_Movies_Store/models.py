@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib.auth.hashers import make_password, check_password
+
 # Create your models here.
 class Movie(models.Model):
     title = models.CharField(max_length=255)
@@ -57,3 +59,27 @@ class CartItem(models.Model):
         # Assuming the Movie model has a price field (add it if necessary)
         return self.movie.price * self.quantity if hasattr(self.movie, 'price') else 0
 
+class SecurityQuestion(models.Model):
+    SECURITY_QUESTIONS = [
+        ("pet", "What was the name of your first pet?"),
+        ("school", "What was the name of your first school?"),
+        ("city", "In what city were you born?"),
+    ]
+
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="security_question")
+    question = models.CharField(max_length=50, choices=SECURITY_QUESTIONS)
+    answer = models.CharField(max_length=255)  # Will be hashed
+
+    def set_answer(self, raw_answer):
+        """Hashes the security answer before saving it."""
+        self.answer = make_password(raw_answer)
+
+    def check_answer(self, raw_answer):
+        """Checks if the provided answer matches the stored hashed answer."""
+        return check_password(raw_answer, self.answer)
+
+    def save(self, *args, **kwargs):
+        """Ensures the security answer is always hashed before saving."""
+        if not self.answer.startswith("pbkdf2_sha256$"):  # Prevent double hashing
+            self.set_answer(self.answer)
+        super().save(*args, **kwargs)

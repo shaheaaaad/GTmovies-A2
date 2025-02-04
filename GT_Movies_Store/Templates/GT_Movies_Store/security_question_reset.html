@@ -1,0 +1,18 @@
+{% extends "GT_Movies_Store/base.html" %}
+{% block content %}
+  <h2>Reset Your Password</h2>
+  <form method="post">
+    {% csrf_token %}
+
+    <label>Username:</label>
+    <input type="text" name="username" required>
+
+    <label>Security Answer:</label>
+    <input type="text" name="security_answer" required>
+
+    <label>New Password:</label>
+    <input type="password" name="new_password" required>
+
+    <button type="submit">Reset Password</button>
+  </form>
+{% endblock %}
