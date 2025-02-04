@@ -6,7 +6,7 @@ from datetime import datetime
 
 class Command(BaseCommand):
     def handle(self, *args, **kwargs):
-        with open('/Users/shahdbargouthi/Desktop/GTmovieStore-A2/mysite/movies_metadata.csv', 'r') as file:
+        with open('mysite/movies_metadata.csv', 'r') as file:
             reader = csv.DictReader(file)
             for row in reader:
                 original_title = row['original_title']
