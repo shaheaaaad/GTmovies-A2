@@ -7,7 +7,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #003057; /* GT Dark Blue */
+    background-color: #003057 !important; /* GT Dark Blue */
 }
 
 .navbar-left {
@@ -38,7 +38,7 @@ body {
 
 /* Link Styling */
 .nav-link {
-    color: #003057 !important;
+    color: #ffffff !important;
     margin-right: 15px;
 }
 
