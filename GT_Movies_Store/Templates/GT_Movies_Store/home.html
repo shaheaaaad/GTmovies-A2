@@ -18,7 +18,7 @@
                 </a>
 
                 <!-- Add to Cart Button -->
-                <a href="{% url 'cart' %}" class="btn btn-warning add-to-cart">
+                <a href="{% url 'add_to_cart' movie.id %}" class="btn btn-warning add-to-cart">
                     <img src="{% static 'GT_Movies_Store/assets/cart-icon.png' %}" class="cart-icon" alt="Cart">
                     <span>Add to Cart</span>
                 </a>
