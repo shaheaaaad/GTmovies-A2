@@ -1,5 +1,8 @@
+import re
+
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
+from django.db.models import Q
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm
@@ -170,3 +173,28 @@ def security_question_reset(request):
             messages.error(request, "User or security question not found.")
 
     return render(request, "GT_Movies_Store/security_question_reset.html")
+
+def search_movies(request):
+    query = request.GET.get('q', '').strip()
+    if not query:
+        return render(request, 'GT_Movies_Store/search_results.html', {'movies': [], 'query': query})
+
+    # ✅ Step 1: Prioritize exact title matches
+    title_exact_matches = Movie.objects.filter(title__iexact=query).order_by('title')
+
+    # ✅ Step 2: Find full-word matches using regex (prevents "Wheat" from matching "Heat")
+    title_regex_matches = Movie.objects.filter(
+        Q(title__iregex=fr"\b{re.escape(query)}\b") & ~Q(id__in=title_exact_matches)
+    ).order_by('title')
+
+    # ✅ Step 3: Get description matches only if not found in title
+    description_matches = Movie.objects.filter(
+        Q(description__iregex=fr"\b{re.escape(query)}\b") &
+        ~Q(id__in=title_exact_matches.values_list('id', flat=True)) &
+        ~Q(id__in=title_regex_matches.values_list('id', flat=True))
+    ).order_by('title')
+
+    # Combine results: exact title matches first, then full-word matches, then description matches
+    movies = list(title_exact_matches) + list(title_regex_matches) + list(description_matches)
+
+    return render(request, 'GT_Movies_Store/search_results.html', {'movies': movies, 'query': query})

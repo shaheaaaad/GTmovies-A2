@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 from GT_Movies_Store import views
-from GT_Movies_Store.views import register, login_view, logout_view
+from GT_Movies_Store.views import register, login_view, logout_view, search_movies
 
 from django.contrib.auth import views as auth_views
 
@@ -52,5 +52,5 @@ urlpatterns = [
 
     path('setup_security_question/', setup_security_question, name='setup_security_question'),
     path('reset_password_security/', security_question_reset, name='security_question_reset'),
-
+    path('search/', search_movies, name='search'),
 ]
