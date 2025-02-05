@@ -2,16 +2,28 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'GT_Movies_Store/style.css' %}">
 {% block content %}
-    <h1>{{ movie.title }}</h1>
-    <img src="{% static 'GT_Movies_Store/movie_images/' %}{{ movie.title|slugify }}.jpg"
-     onerror="this.onerror=null; this.src='{% static 'GT_Movies_Store/movie_images/default.jpg' %}'"
-     alt="{{ movie.title }}" width="200">
-    <p><strong>Release Date:</strong> {{ movie.release_date }}</p>
-    <p>{{ movie.description }}</p>
+    <div class="movie-container">
+        <div class = "movie-info">
+            <h1>{{ movie.title }}</h1>
+            <img src="{% static 'GT_Movies_Store/movie_images/' %}{{ movie.title|slugify }}.jpg"
+             onerror="this.onerror=null; this.src='{% static 'GT_Movies_Store/movie_images/default.jpg' %}'"
+             alt="{{ movie.title }}" width="200">
+            <p><strong>Release Date:</strong> {{ movie.release_date }}</p>
+            <p>{{ movie.description }}</p>
 
-    {% if movie.image %}
-        <img src="{{ movie.image.url }}" alt="{{ movie.title }}" width="300">
-    {% endif %}
+            <a href="{% url 'add_to_cart' movie.id %}" class="btn btn-warning add-to-cart">
+                <img src="{% static 'GT_Movies_Store/assets/cart-icon.png' %}" class="cart-icon" style="width: 200px;" alt="Cart">
+                <span>Add to Cart</span>
+            </a>
+        </div>
+
+        <div class="movie-image">
+            {% if movie.image %}
+                <img src="{{ movie.image.url }}" alt="{{ movie.title }}" width="300">
+            {% endif %}
+        </div>
+
+    </div>
 
     <h2>Reviews</h2>
     <ul>

@@ -181,3 +181,22 @@ body {
     object-fit: contain; /* Prevents stretching */
 }
 
+.movie-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.movie-info {
+    flex: 1;  /* Takes available space */
+    max-width: 400px; /* Limits width to avoid stretching */
+}
+
+.movie-info .cart-icon {
+    width: 250px !important;
+}
+/* Right Section: Movie Image */
+.movie-image img {
+    width: 300px; /* Adjust to preferred size */
+    border-radius: 8px; /* Optional: rounded corners */
+}
