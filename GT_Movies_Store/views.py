@@ -6,7 +6,9 @@ from django.contrib.auth import authenticate, login, logout
 from GT_Movies_Store.models import Movie
 from GT_Movies_Store.forms import UserRegistrationForm
 from django.contrib.auth.forms import AuthenticationForm
-
+from .models import Movie, Review
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 
 # Create your views here.
 def index(request):
@@ -73,5 +75,45 @@ def logout_view(request):
     return redirect('/home')
 
 def movie(request, movie_id):
-    highlighted_movie = get_object_or_404(Movie, id=movie_id)
-    return render(request, "GT_Movies_Store/movie.html", {"movie": highlighted_movie})
+    movie = get_object_or_404(Movie, id=movie_id)
+
+    if request.method == 'POST' and request.user.is_authenticated:
+        comment = request.POST.get('comment', '').strip()
+        if comment:
+            Review.objects.create(
+                movie=movie,
+                comment=comment,
+                user=request.user,
+            )
+
+    reviews = movie.reviews.all()  # Use the correct related_name
+    return render(request, 'GT_Movies_Store/movie.html', {
+        'movie': movie,
+        'reviews': reviews,
+    })
+
+
+@login_required
+def create_review(request, id):
+    movie = get_object_or_404(Movie, id=id)
+    if request.method == 'POST':
+        comment = request.POST.get('comment', '').strip()
+        if comment:
+            Review.objects.create(
+                movie=movie,
+                user=request.user,
+                comment=comment
+            )
+        return redirect('movie', movie_id=id)@login_required
+def edit_review(request, id, review_id):
+    review = get_object_or_404(Review, id=review_id, user=request.user)
+    movie = get_object_or_404(Movie, id=id)
+
+    if request.method == 'POST':
+        comment = request.POST.get('comment', '').strip()
+        if comment:
+            review.comment = comment
+            review.save()
+        return redirect('movie', movie_id=id)
+
+    return render(request, 'GT_Movies_Store/edit_review.html', {'review': review, 'movie': movie})
