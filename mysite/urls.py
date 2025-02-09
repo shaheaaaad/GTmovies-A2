@@ -15,15 +15,22 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from GT_Movies_Store import views
-from GT_Movies_Store.views import register, login_view, logout_view
+from GT_Movies_Store.views import register, login_view, logout_view, search_movies
 
 from django.contrib.auth import views as auth_views
 
+from GT_Movies_Store.views import setup_security_question
+
+from GT_Movies_Store.views import security_question_reset
+
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('GT_Movies_Store.urls')),
     path('', views.index, name='index'),
     path('home/', views.home, name='home'),
 
@@ -33,7 +40,6 @@ urlpatterns = [
     path('cart/', views.cart, name='cart'),
 
     path('login/', views.login_view, name='login'),
-
     path('register/', register, name='register'),
 
     path('account/', views.account, name='account'),
@@ -44,9 +50,7 @@ urlpatterns = [
 
     path("<int:movie_id>/movie/", views.movie, name="movie"),
 
-    path('reset_password/', auth_views.PasswordResetView.as_view(), name='reset_password'),
-    path('reset_password_sent/', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'),
-    path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
-    path('reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(), name='password_reset_complete'),
-
+    path('setup_security_question/', setup_security_question, name='setup_security_question'),
+    path('reset_password_security/', security_question_reset, name='security_question_reset'),
+    path('search/', search_movies, name='search'),
 ]

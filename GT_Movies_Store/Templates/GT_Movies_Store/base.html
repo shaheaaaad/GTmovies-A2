@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 
     <!-- Custom CSS (Fix Issue #1) -->
-    <link rel="stylesheet" href="{% static 'GT_Movies_Store/style.css' %}">
+    <link rel="stylesheet" href="{% static 'GT_Movies_Store/style.css' %}?v=2">
 
     <style>
         body {
@@ -25,7 +25,10 @@
 <nav class="navbar navbar-expand-lg bg-dark">
     <div class="container d-flex">
         <a class="navbar-left text-white" href="/welcome">GT Movies Store</a>
-
+        <form action="{% url 'search' %}" method="GET" class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search movies..." name="q" aria-label="Search">
+            <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
         <div class="navbar-right ms-auto">
             <ul class="navbar-nav">
                 <li class="nav-item">

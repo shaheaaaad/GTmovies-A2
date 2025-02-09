@@ -1,0 +1,26 @@
+{% extends "GT_Movies_Store/base.html" %}
+{% load static %}
+{% block title %}Search Results - GT Movies Store{% endblock %}
+
+{% block content %}
+    <div class="container mt-4">
+        <h2>Search Results for "{{ query }}"</h2>
+
+        {% if movies %}
+            <div class="movie-grid">
+                {% for movie in movies %}
+                    <div class="movie-card">
+                        <a href="{% url 'movie' movie.id %}">
+                            <h3>{{ movie.title }} ({{ movie.release_date }})</h3>
+                            <img src="{% static 'GT_Movies_Store/movie_images/' %}{{ movie.title|slugify }}.jpg"
+                                 onerror="this.onerror=null; this.src='{% static 'GT_Movies_Store/movie_images/default.jpg' %}'"
+                                 alt="{{ movie.title }}" width="200">
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No movies found matching "{{ query }}". Try another search!</p>
+        {% endif %}
+    </div>
+{% endblock %}

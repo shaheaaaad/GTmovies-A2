@@ -7,7 +7,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #003057; /* GT Dark Blue */
+    background-color: #003057 !important; /* GT Dark Blue */
 }
 
 .navbar-left {
@@ -38,7 +38,7 @@ body {
 
 /* Link Styling */
 .nav-link {
-    color: #003057 !important;
+    color: #ffffff !important;
     margin-right: 15px;
 }
 
@@ -181,3 +181,22 @@ body {
     object-fit: contain; /* Prevents stretching */
 }
 
+.movie-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.movie-info {
+    flex: 1;  /* Takes available space */
+    max-width: 400px; /* Limits width to avoid stretching */
+}
+
+.movie-info .cart-icon {
+    width: 250px !important;
+}
+/* Right Section: Movie Image */
+.movie-image img {
+    width: 300px; /* Adjust to preferred size */
+    border-radius: 8px; /* Optional: rounded corners */
+}
