@@ -18,7 +18,7 @@ from django.urls import reverse
 # --------------------------- General Views ---------------------------
 
 def index(request):
-    return render(request, 'GT_Movies_Store/base.html')
+    return render(request, 'GT_Movies_Store/welcome.html')
 
 
 def home(request):
