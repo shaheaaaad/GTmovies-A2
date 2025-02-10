@@ -15,14 +15,17 @@ class Movie(models.Model):
 
     def __str__(self):
         return self.title
-
-class Review (models.Model):
-    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
+class Review(models.Model):
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='reviews')
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.CharField(max_length=255, default="Unknown Author")
+    comment = models.CharField(max_length=255, default="No comment")
     review = models.TextField()
-    author = models.CharField(max_length=255, default='Unknown Author')
 
     def __str__(self):
-        return f"Review for {self.movie.title}"
+        return f"Review for {self.movie.title} by {self.user.username}"
+
+
 
 class Order(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
