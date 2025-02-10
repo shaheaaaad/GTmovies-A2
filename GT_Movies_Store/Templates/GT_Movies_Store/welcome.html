@@ -3,8 +3,30 @@
 {% block title %}Welcome{% endblock %}
 
 {% block content %}
-    <div class="title">
-        <h1>Welcome to the GT Movies Store</h1>
-        <p>We need a welcome page.</p>
+    <div class="container text-center mt-5">
+        <h1 class="mb-4">🎬 Welcome to GT Movies Store! 🍿</h1>
+        <p class="lead">Your One-Stop Shop for Movies and Reviews!</p>
+
+        <hr>
+
+        <h3>Why You’ll Love GT Movies Store:</h3>
+        <ul class="list-unstyled mt-3">
+            <li>✅ <strong>Browse Thousands of Movies</strong> – From timeless classics to the latest blockbusters.</li>
+            <li>✅ <strong>Write & Read Reviews</strong> – Share your thoughts and see what others are saying.</li>
+            <li>✅ <strong>Build Your Collection</strong> – Add movies to your cart and expand your library.</li>
+        </ul>
+
+        <hr>
+
+        <h3 class="mt-4">✨ Ready to Dive In?</h3>
+        <div class="mt-3">
+            <a href="{% url 'home' %}" class="btn btn-primary">🎥 Browse Movies</a>
+            <a href="{% url 'cart' %}" class="btn btn-warning">🛒 View Your Cart</a>
+        </div>
+
+        <div class="mt-4">
+            <p><strong>New here?</strong> <a href="{% url 'register' %}" class="btn btn-success">Create an Account</a></p>
+            <p><strong>Already a member?</strong> <a href="{% url 'login' %}" class="btn btn-info">Log In</a></p>
+        </div>
     </div>
 {% endblock %}
