@@ -30,13 +30,13 @@
 
     <h2>Reviews</h2>
 <ul>
-    {% for review in movie.review_set.all %}
+    {% for review in movie.reviews.all %}
         <li>
             <strong>{{ review.user.username }}</strong>: {{ review.comment }}
             <br><small>{{ review.date }}</small>
             {% if user.is_authenticated and user == review.user %}
                 <a href="{% url 'movies.edit_review' movie.id review.id %}" class="btn btn-primary">Edit</a>
-                <a href="{% url 'movies.delete_review' movie.id review.id %}" class="btn btn-danger">Delete</a>
+                <a href="{% url 'delete_review' movie.id review.id %}" class="btn btn-danger">Delete</a>
             {% endif %}
         </li>
     {% empty %}

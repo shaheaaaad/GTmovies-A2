@@ -89,10 +89,11 @@ def movie(request, movie_id):
         comment = request.POST.get('comment', '').strip()
         if comment:
             Review.objects.create(
-                movie=movie,
+                movie=highlighted_movie,
                 comment=comment,
                 user=request.user,
             )
+        return redirect('movie', movie_id=movie_id)
 
     reviews = highlighted_movie.reviews.all()  # Use the correct related_name
     return render(request, 'GT_Movies_Store/movie.html', {
@@ -116,6 +117,11 @@ def cart(request):
         'cart_total': cart_total,
     })
 
+@login_required
+def delete_review(request, id, review_id):
+    review = get_object_or_404(Review, id=review_id, user=request.user)
+    review.delete()
+    return redirect('movie', movie_id=id)  # Redirect to the movie page
 
 @login_required(login_url='/login/')
 def add_to_cart(request, movie_id):

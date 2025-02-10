@@ -53,4 +53,6 @@ urlpatterns = [
     path('setup_security_question/', setup_security_question, name='setup_security_question'),
     path('reset_password_security/', security_question_reset, name='security_question_reset'),
     path('search/', search_movies, name='search'),
+
+
 ]
