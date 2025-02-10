@@ -132,16 +132,17 @@ def add_to_cart(request, movie_id):
     movie = get_object_or_404(Movie, id=movie_id)
     cart, _ = Cart.objects.get_or_create(user=request.user)
 
-    # Get existing item or create a new one
+    # Get or create cart item
     cart_item, created = CartItem.objects.get_or_create(cart=cart, movie=movie, defaults={'quantity': 1})
 
     if not created:
-        cart_item.quantity += 1
-        cart_item.save()
+        cart_item.quantity += 1  # ✅ Increase quantity
+        cart_item.save()  # ✅ Save only once
 
-    return redirect('cart')  # Redirect to cart instead of reloading movie page
-
-
+    return render(request, 'GT_Movies_Store/movie.html', {
+        'movie': movie,
+        'success_message': 'Item added to cart successfully!'  # ✅ Pass success message
+    })
 
 @login_required(login_url='/login/')
 def remove_from_cart(request, item_id):

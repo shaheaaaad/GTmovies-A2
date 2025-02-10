@@ -11,6 +11,12 @@
             <p><strong>Release Date:</strong> {{ movie.release_date }}</p>
             <p>{{ movie.description }}</p>
 
+            {% if success_message %}
+                <div class="alert alert-success">
+                    {{ success_message }}
+                </div>
+            {% endif %}
+
             <a href="{% url 'add_to_cart' movie.id %}" class="btn btn-warning add-to-cart">
                 <img src="{% static 'GT_Movies_Store/assets/cart-icon.png' %}" class="cart-icon" style="width: 200px;" alt="Cart">
                 <span>Add to Cart</span>
