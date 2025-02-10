@@ -46,14 +46,14 @@ class Order(models.Model):
 
 
 class OrderItem(models.Model):
-    """Links movies to orders"""
-    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name="items")
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name="items")  # ✅ Add related_name
     movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default=1)
-    price = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)  # ✅ Store price at purchase time
+    price = models.DecimalField(max_digits=10, decimal_places=2)
 
     def __str__(self):
         return f"{self.movie.title} (x{self.quantity}) in Order #{self.order.id}"
+
 
     @property
     def total_price(self):

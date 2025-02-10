@@ -26,6 +26,9 @@ from GT_Movies_Store.views import setup_security_question
 
 from GT_Movies_Store.views import security_question_reset
 
+from GT_Movies_Store.views import checkout, order_history, order_detail
+
+
 
 
 urlpatterns = [
@@ -53,6 +56,10 @@ urlpatterns = [
     path('setup_security_question/', setup_security_question, name='setup_security_question'),
     path('reset_password_security/', security_question_reset, name='security_question_reset'),
     path('search/', search_movies, name='search'),
+
+    path("checkout/", checkout, name="checkout"),
+    path("orders/", order_history, name="order_history"),
+    path("orders/<int:order_id>/", order_detail, name="order_detail"),
 
 
 ]

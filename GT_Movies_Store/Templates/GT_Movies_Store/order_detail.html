@@ -1,0 +1,13 @@
+{% extends "GT_Movies_Store/base.html" %}
+{% block content %}
+<h2>Order #{{ order.id }}</h2>
+<p>Date: {{ order.order_date }}</p>
+<p>Total Price: ${{ order.total_price }}</p>
+
+<h3>Movies Ordered:</h3>
+<ul>
+    {% for item in order_items %}
+        <li>{{ item.movie.title }} - Quantity: {{ item.quantity }} - Price: ${{ item.price }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

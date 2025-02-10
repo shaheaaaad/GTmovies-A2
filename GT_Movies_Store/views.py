@@ -8,12 +8,14 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
 from django.contrib import messages
-from GT_Movies_Store.models import Movie, Cart, CartItem, SecurityQuestion, Review
+from GT_Movies_Store.models import Movie, Cart, CartItem, SecurityQuestion, Review, Order, OrderItem
 from GT_Movies_Store.forms import UserRegistrationForm, SecurityQuestionForm
 
 from .models import Movie, Review
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 
 # --------------------------- General Views ---------------------------
 
@@ -100,6 +102,30 @@ def movie(request, movie_id):
         'movie': highlighted_movie,
         'reviews': reviews,
     })
+def search_movies(request):
+    query = request.GET.get('q', '').strip()
+    if not query:
+        return render(request, 'GT_Movies_Store/search_results.html', {'movies': [], 'query': query})
+
+    # ✅ Step 1: Prioritize exact title matches
+    title_exact_matches = Movie.objects.filter(title__iexact=query).order_by('title')
+
+    # ✅ Step 2: Find full-word matches using regex (prevents "Wheat" from matching "Heat")
+    title_regex_matches = Movie.objects.filter(
+        Q(title__iregex=fr"\b{re.escape(query)}\b") & ~Q(id__in=title_exact_matches)
+    ).order_by('title')
+
+    # ✅ Step 3: Get description matches only if not found in title
+    description_matches = Movie.objects.filter(
+        Q(description__iregex=fr"\b{re.escape(query)}\b") &
+        ~Q(id__in=title_exact_matches.values_list('id', flat=True)) &
+        ~Q(id__in=title_regex_matches.values_list('id', flat=True))
+    ).order_by('title')
+
+    # Combine results: exact title matches first, then full-word matches, then description matches
+    movies = list(title_exact_matches) + list(title_regex_matches) + list(description_matches)
+
+    return render(request, 'GT_Movies_Store/search_results.html', {'movies': movies, 'query': query})
 
 # --------------------------- Cart Views ---------------------------
 
@@ -116,12 +142,6 @@ def cart(request):
         'cart_items': cart_items,
         'cart_total': cart_total,
     })
-
-@login_required
-def delete_review(request, id, review_id):
-    review = get_object_or_404(Review, id=review_id, user=request.user)
-    review.delete()
-    return redirect('movie', movie_id=id)  # Redirect to the movie page
 
 @login_required(login_url='/login/')
 def add_to_cart(request, movie_id):
@@ -197,30 +217,8 @@ def security_question_reset(request):
 
     return render(request, "GT_Movies_Store/security_question_reset.html")
 
-def search_movies(request):
-    query = request.GET.get('q', '').strip()
-    if not query:
-        return render(request, 'GT_Movies_Store/search_results.html', {'movies': [], 'query': query})
+# --------------------------- Review Views ---------------------------
 
-    # ✅ Step 1: Prioritize exact title matches
-    title_exact_matches = Movie.objects.filter(title__iexact=query).order_by('title')
-
-    # ✅ Step 2: Find full-word matches using regex (prevents "Wheat" from matching "Heat")
-    title_regex_matches = Movie.objects.filter(
-        Q(title__iregex=fr"\b{re.escape(query)}\b") & ~Q(id__in=title_exact_matches)
-    ).order_by('title')
-
-    # ✅ Step 3: Get description matches only if not found in title
-    description_matches = Movie.objects.filter(
-        Q(description__iregex=fr"\b{re.escape(query)}\b") &
-        ~Q(id__in=title_exact_matches.values_list('id', flat=True)) &
-        ~Q(id__in=title_regex_matches.values_list('id', flat=True))
-    ).order_by('title')
-
-    # Combine results: exact title matches first, then full-word matches, then description matches
-    movies = list(title_exact_matches) + list(title_regex_matches) + list(description_matches)
-
-    return render(request, 'GT_Movies_Store/search_results.html', {'movies': movies, 'query': query})
 @login_required
 def create_review(request, id):
     movie = get_object_or_404(Movie, id=id)
@@ -245,3 +243,58 @@ def edit_review(request, id, review_id):
         return redirect('movie', movie_id=id)
 
     return render(request, 'GT_Movies_Store/edit_review.html', {'review': review, 'movie': movie})
+
+@login_required
+def delete_review(request, id, review_id):
+    review = get_object_or_404(Review, id=review_id, user=request.user)
+    review.delete()
+    return redirect('movie', movie_id=id)  # Redirect to the movie page
+
+# --------------------------- Order Views ---------------------------
+
+@login_required
+def checkout(request):
+    """Processes the user's cart into an order."""
+    cart = Cart.objects.filter(user=request.user).first()
+    if not cart or not cart.items.exists():
+        messages.error(request, "Your cart is empty.")
+        return redirect("cart")  # Redirect back to cart if it's empty
+
+    # Calculate total price
+    total_price = sum(item.movie.price * item.quantity for item in cart.items.all())
+
+    # Create an Order
+    order = Order.objects.create(user=request.user, total_price=total_price)
+
+    # Move items from Cart to Order
+    for item in cart.items.all():
+        OrderItem.objects.create(
+            order=order,
+            movie=item.movie,
+            quantity=item.quantity,
+            price=item.movie.price  # Store price at time of purchase
+        )
+
+    # Clear the cart after checkout
+    cart.items.all().delete()
+    messages.success(request, "Your order has been placed successfully!")
+
+    return redirect("order_history")  # Redirect to order history after checkout
+
+
+@login_required
+def order_history(request):
+    """Displays past orders for the logged-in user."""
+    orders = Order.objects.filter(user=request.user).order_by("-order_date")
+    return render(request, "GT_Movies_Store/order_history.html", {"orders": orders})
+
+def order_detail(request, order_id):
+    order = get_object_or_404(Order, id=order_id)
+    order_items = order.items.all()  # ✅ Use related_name instead
+
+    return render(request, "GT_Movies_Store/order_detail.html", {
+        "order": order,
+        "order_items": order_items,
+    })
+
+
