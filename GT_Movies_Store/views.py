@@ -84,6 +84,31 @@ def movie(request, movie_id):
     highlighted_movie = get_object_or_404(Movie, id=movie_id)
     return render(request, "GT_Movies_Store/movie.html", {"movie": highlighted_movie})
 
+def search_movies(request):
+    query = request.GET.get('q', '').strip()
+    if not query:
+        return render(request, 'GT_Movies_Store/search_results.html', {'movies': [], 'query': query})
+
+    # ✅ Step 1: Prioritize exact title matches
+    title_exact_matches = Movie.objects.filter(title__iexact=query).order_by('title')
+
+    # ✅ Step 2: Find full-word matches using regex (prevents "Wheat" from matching "Heat")
+    title_regex_matches = Movie.objects.filter(
+        Q(title__iregex=fr"\b{re.escape(query)}\b") & ~Q(id__in=title_exact_matches)
+    ).order_by('title')
+
+    # ✅ Step 3: Get description matches only if not found in title
+    description_matches = Movie.objects.filter(
+        Q(description__iregex=fr"\b{re.escape(query)}\b") &
+        ~Q(id__in=title_exact_matches.values_list('id', flat=True)) &
+        ~Q(id__in=title_regex_matches.values_list('id', flat=True))
+    ).order_by('title')
+
+    # Combine results: exact title matches first, then full-word matches, then description matches
+    movies = list(title_exact_matches) + list(title_regex_matches) + list(description_matches)
+
+    return render(request, 'GT_Movies_Store/search_results.html', {'movies': movies, 'query': query})
+
 
 # --------------------------- Cart Views ---------------------------
 
@@ -107,15 +132,15 @@ def add_to_cart(request, movie_id):
     movie = get_object_or_404(Movie, id=movie_id)
     cart, _ = Cart.objects.get_or_create(user=request.user)
 
-    cart_item, created = CartItem.objects.get_or_create(cart=cart, movie=movie)
+    # Get existing item or create a new one
+    cart_item, created = CartItem.objects.get_or_create(cart=cart, movie=movie, defaults={'quantity': 1})
+
     if not created:
         cart_item.quantity += 1
         cart_item.save()
 
-    return render(request, 'GT_Movies_Store/movie.html', {
-        'movie': movie,
-        'success_message': 'Item added to cart successfully!'
-    })
+    return redirect('cart')  # Redirect to cart instead of reloading movie page
+
 
 
 @login_required(login_url='/login/')
@@ -173,28 +198,3 @@ def security_question_reset(request):
             messages.error(request, "User or security question not found.")
 
     return render(request, "GT_Movies_Store/security_question_reset.html")
-
-def search_movies(request):
-    query = request.GET.get('q', '').strip()
-    if not query:
-        return render(request, 'GT_Movies_Store/search_results.html', {'movies': [], 'query': query})
-
-    # ✅ Step 1: Prioritize exact title matches
-    title_exact_matches = Movie.objects.filter(title__iexact=query).order_by('title')
-
-    # ✅ Step 2: Find full-word matches using regex (prevents "Wheat" from matching "Heat")
-    title_regex_matches = Movie.objects.filter(
-        Q(title__iregex=fr"\b{re.escape(query)}\b") & ~Q(id__in=title_exact_matches)
-    ).order_by('title')
-
-    # ✅ Step 3: Get description matches only if not found in title
-    description_matches = Movie.objects.filter(
-        Q(description__iregex=fr"\b{re.escape(query)}\b") &
-        ~Q(id__in=title_exact_matches.values_list('id', flat=True)) &
-        ~Q(id__in=title_regex_matches.values_list('id', flat=True))
-    ).order_by('title')
-
-    # Combine results: exact title matches first, then full-word matches, then description matches
-    movies = list(title_exact_matches) + list(title_regex_matches) + list(description_matches)
-
-    return render(request, 'GT_Movies_Store/search_results.html', {'movies': movies, 'query': query})
