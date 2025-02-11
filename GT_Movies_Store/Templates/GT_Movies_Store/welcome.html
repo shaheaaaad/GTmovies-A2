@@ -27,6 +27,7 @@
         <div class="mt-4">
             <p><strong>New here?</strong> <a href="{% url 'register' %}" class="btn btn-success">Create an Account</a></p>
             <p><strong>Already a member?</strong> <a href="{% url 'login' %}" class="btn btn-info">Log In</a></p>
+             <a href="{% url 'admin:index' %}" class="btn btn-dark mt-2">⚙️ Admin Dashboard</a>
         </div>
     </div>
 {% endblock %}
