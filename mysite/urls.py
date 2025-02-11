@@ -26,7 +26,7 @@ from GT_Movies_Store.views import setup_security_question
 
 from GT_Movies_Store.views import security_question_reset
 
-from GT_Movies_Store.views import checkout, order_history, order_detail
+from GT_Movies_Store.views import checkout, order_history, order_detail, confirm_checkout, update_cart
 
 
 
@@ -58,10 +58,13 @@ urlpatterns = [
     path('search/', search_movies, name='search'),
 
     path("checkout/", checkout, name="checkout"),
+
+    path("checkout/confirm/", confirm_checkout, name="confirm_checkout"),  # ✅ New checkout step
     path("orders/", order_history, name="order_history"),
     path("orders/<int:order_id>/", order_detail, name="order_detail"),
 
     path("order-history/", views.order_history, name="order_history"),
 
+    path("cart/update/<int:item_id>/", update_cart, name="update_cart"),
 
 ]

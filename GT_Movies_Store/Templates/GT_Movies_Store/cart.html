@@ -20,7 +20,15 @@
                     <tr>
                         <td>{{ item.movie.title }}</td>
                         <td>${{ item.movie.price }}</td>
-                        <td>{{ item.quantity }}</td>
+                        <td>
+                            <form method="post" action="{% url 'update_cart' item.id %}">
+                                {% csrf_token %}
+                                <input type="number" name="quantity" value="{{ item.quantity }}" min="1"
+                                       class="form-control form-control-sm"
+                                       style="width: 60px;"
+                                       onchange="this.form.submit()">  <!-- ✅ Auto-submits form when changed -->
+                            </form>
+                        </td>
                         <td>${{ item.total_price }}</td>
                         <td>
                             <form method="post" action="{% url 'remove_from_cart' item.id %}">
@@ -32,12 +40,14 @@
                 {% endfor %}
             </tbody>
         </table>
+
         <div class="d-flex justify-content-between mt-4">
             <h4>Total: ${{ cart_total }}</h4>
             <a href="{% url 'home' %}" class="btn btn-primary">Continue Shopping</a>
+
             <form action="{% url 'checkout' %}" method="POST">
                 {% csrf_token %}
-                <button type="submit" class="btn btn-success">Checkout</button>
+                <button type="submit" class="btn btn-lg btn-success">Proceed to Checkout</button>
             </form>
         </div>
 

@@ -14,7 +14,7 @@ from GT_Movies_Store.forms import UserRegistrationForm, SecurityQuestionForm
 from .models import Movie, Review
 from django.http import HttpResponseRedirect
 from django.urls import reverse
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 
 # --------------------------- General Views ---------------------------
@@ -168,6 +168,23 @@ def remove_from_cart(request, item_id):
     return redirect('cart')
 
 
+@login_required
+def update_cart(request, item_id):
+    """Updates cart item quantity when changed in the form."""
+    cart_item = get_object_or_404(CartItem, id=item_id, cart__user=request.user)
+
+    if request.method == "POST":
+        new_quantity = request.POST.get("quantity")
+
+        if new_quantity and new_quantity.isdigit() and int(new_quantity) > 0:
+            cart_item.quantity = int(new_quantity)
+            cart_item.save()
+        else:
+            messages.error(request, "Invalid quantity entered.")
+
+    return redirect("cart")  # ✅ Reloads cart page after updating
+
+
 # --------------------------- Security Question Setup ---------------------------
 
 @login_required
@@ -250,51 +267,70 @@ def delete_review(request, id, review_id):
     review.delete()
     return redirect('movie', movie_id=id)  # Redirect to the movie page
 
-# --------------------------- Order Views ---------------------------
+# --------------------------- Checkout & Orders ---------------------------
 
 @login_required
 def checkout(request):
-    """Processes the user's cart into an order."""
+    """Step 1: Checkout page where users review their order before confirming."""
     cart = Cart.objects.filter(user=request.user).first()
     if not cart or not cart.items.exists():
         messages.error(request, "Your cart is empty.")
-        return redirect("cart")  # Redirect back to cart if it's empty
+        return redirect("cart")
 
-    # Calculate total price
+    cart_items = cart.items.all()
+    total_price = sum(item.total_price for item in cart_items)
+
+    return render(request, "GT_Movies_Store/checkout.html", {
+        "cart_items": cart_items,
+        "cart_total": total_price
+    })
+
+
+
+@login_required
+def confirm_checkout(request):
+    """Step 2: Confirms the order and moves cart items to an order."""
+    cart = Cart.objects.filter(user=request.user).first()
+
+    if not cart or not cart.items.exists():
+        messages.error(request, "Your cart is empty.")
+        return redirect("cart")
+
+    # ✅ Ensure this is a POST request
+    if request.method != "POST":
+        messages.error(request, "Invalid request. Please confirm your order properly.")
+        return redirect("checkout")
+
     total_price = sum(item.movie.price * item.quantity for item in cart.items.all())
 
-    # Create an Order
-    order = Order.objects.create(user=request.user, total_price=total_price)
+    # ✅ Create the Order
+    order = Order.objects.create(user=request.user, total_price=total_price, status="Pending")
 
-    # Move items from Cart to Order
+    # ✅ Move cart items to order
     for item in cart.items.all():
-        OrderItem.objects.create(
-            order=order,
-            movie=item.movie,
-            quantity=item.quantity,
-            price=item.movie.price  # Store price at time of purchase
-        )
+        OrderItem.objects.create(order=order, movie=item.movie, quantity=item.quantity, price=item.movie.price)
 
-    # Clear the cart after checkout
+    # ✅ Clear the cart after checkout
     cart.items.all().delete()
     messages.success(request, "Your order has been placed successfully!")
 
-    return redirect("order_history")  # Redirect to order history after checkout
+    return redirect("order_detail", order.id)  # ✅ Redirect to order confirmation page
 
 
 @login_required
 def order_history(request):
-    orders = Order.objects.filter(user=request.user).order_by("-order_date")  # ✅ Show latest orders first
+    """Displays all orders for the logged-in user."""
+    orders = Order.objects.filter(user=request.user).order_by("-order_date")
     return render(request, "GT_Movies_Store/order_history.html", {"orders": orders})
 
-
+@login_required
 def order_detail(request, order_id):
     order = get_object_or_404(Order, id=order_id)
-    order_items = order.items.all()  # ✅ Use related_name instead
+
+    order_items = OrderItem.objects.filter(order=order)
 
     return render(request, "GT_Movies_Store/order_detail.html", {
         "order": order,
         "order_items": order_items,
     })
-
 
