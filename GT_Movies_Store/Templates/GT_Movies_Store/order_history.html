@@ -1,17 +1,36 @@
 {% extends "GT_Movies_Store/base.html" %}
 {% block content %}
-<h2>Your Order History</h2>
-{% if orders %}
-    <ul>
-        {% for order in orders %}
-            <li>
-                <a href="{% url 'order_detail' order.id %}">
-                    Order #{{ order.id }} - {{ order.order_date }} - ${{ order.total_price }}
-                </a>
-            </li>
-        {% endfor %}
-    </ul>
-{% else %}
-    <p>You have not placed any orders yet.</p>
-{% endif %}
+    <div class="container my-5">
+        <h2>Order History</h2>
+
+        {% if orders %}
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Date</th>
+                        <th>Total Price</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in orders %}
+                        <tr>
+                            <td>#{{ order.id }}</td>
+                            <td>{{ order.order_date }}</td>
+                            <td>${{ order.total_price }}</td>
+                            <td>{{ order.status }}</td>
+                            <td>
+                                <a href="{% url 'order_detail' order.id %}" class="btn btn-info btn-sm">View</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No past orders found.</p>
+            <a href="{% url 'home' %}" class="btn btn-primary">Go Shopping</a>
+        {% endif %}
+    </div>
 {% endblock %}

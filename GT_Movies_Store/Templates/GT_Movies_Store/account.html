@@ -1,7 +1,15 @@
 {% extends "GT_Movies_Store/base.html" %}
 {% block content %}
-    <div class="title">
-        <h1>Welcome: {{ request.user.username }}!</h1>
-        <a href="{% url 'logout_view' %}" class="btn btn-danger">Logout</a>
+<div class="container my-5">
+    <div class="text-center">
+        <h1 class="mb-4">Welcome, {{ request.user.username }}! 🎬</h1>
+
+        <div class="d-grid gap-3 col-6 mx-auto">
+            <a href="{% url 'order_history' %}" class="btn btn-primary">📜 View Order History</a>
+            <a href="{% url 'cart' %}" class="btn btn-warning">🛒 View Cart</a>
+            <a href="{% url 'home' %}" class="btn btn-info">🏠 Back to Home</a>
+            <a href="{% url 'logout_view' %}" class="btn btn-danger">🚪 Logout</a>
+        </div>
     </div>
+</div>
 {% endblock %}

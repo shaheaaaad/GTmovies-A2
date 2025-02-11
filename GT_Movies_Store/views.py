@@ -284,9 +284,9 @@ def checkout(request):
 
 @login_required
 def order_history(request):
-    """Displays past orders for the logged-in user."""
-    orders = Order.objects.filter(user=request.user).order_by("-order_date")
+    orders = Order.objects.filter(user=request.user).order_by("-order_date")  # ✅ Show latest orders first
     return render(request, "GT_Movies_Store/order_history.html", {"orders": orders})
+
 
 def order_detail(request, order_id):
     order = get_object_or_404(Order, id=order_id)
