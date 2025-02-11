@@ -12,9 +12,9 @@
                     <div class="movie-card">
                         <a href="{% url 'movie' movie.id %}">
                             <h3>{{ movie.title }} ({{ movie.release_date }})</h3>
-                            <img src="{% static 'GT_Movies_Store/movie_images/' %}{{ movie.title|slugify }}.jpg"
-                                 onerror="this.onerror=null; this.src='{% static 'GT_Movies_Store/movie_images/default.jpg' %}'"
-                                 alt="{{ movie.title }}" width="200">
+                            <img src="{{ movie.image }}"
+             onerror="this.onerror=null; this.src='{% static 'GT_Movies_Store/movie_images/default.jpg' %}'"
+             alt="{{ movie.title }}" width="200">
                         </a>
                     </div>
                 {% endfor %}
