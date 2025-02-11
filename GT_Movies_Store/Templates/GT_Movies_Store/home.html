@@ -12,9 +12,9 @@
             <div class="movie-card">
                 <a href="{% url 'movie' movie.id %}">
                     <h3>{{ movie.title }} ({{ movie.release_date }})</h3>
-                    <img src="{% static 'GT_Movies_Store/movie_images/' %}{{ movie.title|slugify }}.jpg"
-                     onerror="this.onerror=null; this.src='{% static 'GT_Movies_Store/movie_images/default.jpg' %}'"
-                     alt="{{ movie.title }}" width="200" class="poster-image">
+                    <img src="{{ movie.image }}"
+             onerror="this.onerror=null; this.src='{% static 'GT_Movies_Store/movie_images/default.jpg' %}'"
+             alt="{{ movie.title }}" width="200">
                 </a>
 
                 <!-- Add to Cart Button -->
@@ -25,6 +25,105 @@
             </div>
         {% endfor %}
     </div>
+
+        <!-- Pagination Links -->
+<!-- Pagination Links -->
+<div class="pagination-container">
+    <nav>
+        <ul class="pagination">
+            <!-- First & Previous Buttons -->
+            {% if page_obj.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?page=1">&laquo; First</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}">‹ Prev</a>
+                </li>
+            {% endif %}
+
+            <!-- Page Numbers -->
+            {% for num in page_obj.paginator.page_range %}
+                {% if num == page_obj.number %}
+                    <li class="page-item active">
+                        <span class="page-link">{{ num }}</span>
+                    </li>
+                {% elif num > page_obj.number|add:-3 and num < page_obj.number|add:3 %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                    </li>
+                {% elif num == 1 or num == page_obj.paginator.num_pages %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+                    </li>
+                    {% if num == 1 and page_obj.number > 4 or num == page_obj.paginator.num_pages and page_obj.number < page_obj.paginator.num_pages|add:-3 %}
+                        <li class="page-item disabled">
+                            <span class="page-link">...</span>
+                        </li>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+
+            <!-- Next & Last Buttons -->
+            {% if page_obj.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next ›</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+
+<!-- CSS Styles -->
+<style>
+.pagination-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination {
+    display: inline-flex;
+    padding: 0;
+    list-style: none;
+    border-radius: 5px;
+}
+
+.page-item {
+    margin: 0 3px;
+}
+
+.page-link {
+    color: #fff;
+    background-color: #007bff;
+    border: 1px solid #007bff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.page-link:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.page-item.active .page-link {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: black;
+    font-weight: bold;
+}
+
+.page-item.disabled .page-link {
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+    color: #6c757d;
+    cursor: default;
+}
+</style>
+
 
 
 {% endblock %}
