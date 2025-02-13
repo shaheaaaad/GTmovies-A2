@@ -12,6 +12,15 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import dj_database_url
+import django_heroku
+import os
+
+# Activate Django-Heroku settings
+django_heroku.settings(locals())
+
+# Ensure static files work properly
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
