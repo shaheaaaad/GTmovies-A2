@@ -11,10 +11,11 @@ import django_heroku
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # ---------------------- Security Settings ----------------------
-SECRET_KEY = os.getenv("SECRET_KEY", "default-insecure-key")  # Use environment variable in production
-DEBUG = os.getenv("DEBUG", "False") == "True"  # Default to False in production
+SECRET_KEY = os.environ.get("SECRET_KEY", "default-insecure-key")  # ✅ Secure fallback
+DEBUG = os.environ.get("DEBUG", "False") == "True"  # ✅ Default to False in production
 
-ALLOWED_HOSTS = ["*"]  # Change this to specific domain in production
+# ✅ Set allowed hosts securely for production
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost").split(",")
 
 # ---------------------- Installed Apps ----------------------
 INSTALLED_APPS = [
@@ -30,7 +31,7 @@ INSTALLED_APPS = [
 # ---------------------- Middleware ----------------------
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',  # ✅ Ensures static files work on Heroku
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # ✅ Static files for Heroku
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -61,9 +62,19 @@ TEMPLATES = [
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # ---------------------- Database (Heroku Postgres) ----------------------
-DATABASES = {
-    "default": dj_database_url.config(default=os.getenv("DATABASE_URL"))
-}
+DATABASE_URL = os.environ.get("DATABASE_URL")
+
+if DATABASE_URL:
+    DATABASES = {
+        "default": dj_database_url.config(default=DATABASE_URL, conn_max_age=600, ssl_require=True)
+    }
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
+    }
 
 # ---------------------- Password Validation ----------------------
 AUTH_PASSWORD_VALIDATORS = [
@@ -81,8 +92,8 @@ USE_TZ = True
 
 # ---------------------- Static Files (CSS, JavaScript, Images) ----------------------
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # Required for Heroku
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"  # Use WhiteNoise
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # ✅ Required for Heroku
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"  # ✅ Use WhiteNoise
 
 # ---------------------- Default Auto Field ----------------------
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
