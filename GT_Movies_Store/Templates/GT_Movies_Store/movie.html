@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+    <a href="{% url 'home' %}" class="btn btn-secondary mt-3">Back to Home</a>
     <div class="movie-container">
         <div class = "movie-info">
             <h1>{{ movie.title }}</h1>
