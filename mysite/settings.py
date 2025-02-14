@@ -15,7 +15,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "default-insecure-key")  # ✅ Secure 
 DEBUG = os.environ.get("DEBUG", "False") == "True"  # ✅ Default to False in production
 
 # ✅ Set allowed hosts securely for production
-ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "localhost").split(",")
+ALLOWED_HOSTS = ['*']
 
 # ---------------------- Installed Apps ----------------------
 INSTALLED_APPS = [
