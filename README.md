@@ -56,11 +56,11 @@ Then visit `http://127.0.0.1:8000/` in your browser.
 - **Scrum** – Agile development methodology
 
 ## Contributors
-Abdulaziz Alajlaan
-Nora Khawaldeh
-Rayyan Shah
-Saad Bahlouli
-Shahd Bargouthi
+- Abdulaziz Alajlaan
+- Nora Khawaldeh
+- Rayyan Shah
+- Saad Bahlouli
+- Shahd Bargouthi
 
 ## License
 This project is for educational purposes under CS 2340 at Georgia Tech.
