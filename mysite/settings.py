@@ -5,7 +5,7 @@ Django settings for mysite project.
 from pathlib import Path
 import os
 import dj_database_url
-import django_heroku
+#import django_heroku
 
 # ---------------------- Base Directory ----------------------
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -102,4 +102,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = '/login/'
 
 # ---------------------- Heroku Settings (Must Be at the End) ----------------------
-django_heroku.settings(locals(), databases=False)  # ✅ Prevents override of DATABASES setting
+#django_heroku.settings(locals(), databases=False)  # ✅ Prevents override of DATABASES setting
