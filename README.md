@@ -55,6 +55,7 @@ Then visit `http://127.0.0.1:8000/` in your browser.
 - **Heroku** – Deployment platform
 - **Scrum** – Agile development methodology
 
+
 ## Contributors
 - Abdulaziz Alajlaan
 - Nora Khawaldeh
@@ -62,10 +63,11 @@ Then visit `http://127.0.0.1:8000/` in your browser.
 - Saad Bahlouli
 - Shahd Bargouthi
 
+## Learn More
+- **Portfolio:** [https://elephant-reed-85n3.squarespace.com/](https://elephant-reed-85n3.squarespace.com/)
+- **Password:** `password`
+
 ## License
 This project is for educational purposes under CS 2340 at Georgia Tech.
 
-**##Learn More **
-- Portfolio: https://elephant-reed-85n3.squarespace.com/
-- password: password
 
