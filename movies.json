@@ -1,0 +1,1718 @@
+[
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 1,
+  "fields": {
+    "title": "300",
+    "release_date": "2006-12-09",
+    "description": "Based on Frank Miller's graphic novel, \"300\" is very loosely based the 480 B.C. Battle of Thermopylae, where the King of Sparta led his army against the advancing Persians; the battle is said to have inspired all of Greece to band together against the Per",
+    "tmdb_id": 1271,
+    "image": "https://image.tmdb.org/t/p/w500/h7Lcio0c9ohxPhSZg42eTlKIVVY.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 2,
+  "fields": {
+    "title": "2001: A Space Odyssey",
+    "release_date": "2068-04-10",
+    "description": "Humanity finds a mysterious object buried beneath the lunar surface and sets off to find its origins with the help of HAL 9000, the world's most advanced super computer.",
+    "tmdb_id": 62,
+    "image": "https://image.tmdb.org/t/p/w500/ve72VxNqjGM69Uky4WTo2bK6rfq.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 3,
+  "fields": {
+    "title": "A Beautiful Mind",
+    "release_date": "2001-12-11",
+    "description": "At Princeton University, John Nash struggles to make a worthwhile contribution to serve as his legacy to the world of mathematics. He finally makes a revolutionary breakthrough that will eventually earn him the Nobel Prize. After graduate school he turns ",
+    "tmdb_id": 453,
+    "image": "https://image.tmdb.org/t/p/w500/rEIg5yJdNOt9fmX4P8gU9LeNoTQ.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 4,
+  "fields": {
+    "title": "A Clockwork Orange",
+    "release_date": "1971-12-18",
+    "description": "Demonic gang-leader Alex goes on the spree of rape, mugging and murder with his pack of \"droogs\". But he's a boy who also likes Beethoven's Ninth and a bit of \"the old in-out, in-out\". He later finds himself at the mercy of the state and its brainwashing ",
+    "tmdb_id": 185,
+    "image": "https://image.tmdb.org/t/p/w500/3buRvP4UhISRkna1YbAVC3Gzn6b.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 5,
+  "fields": {
+    "title": "Aladdin",
+    "release_date": "1992-11-25",
+    "description": "Princess Jasmine grows tired of being forced to remain in the palace and she sneaks out into the marketplace  in disguise where she meets street-urchin Aladdin and the two fall in love, although she may only marry a prince. After being thrown in jail, Ala",
+    "tmdb_id": 812,
+    "image": "https://image.tmdb.org/t/p/w500/eLFfl7vS8dkeG1hKp5mwbm37V83.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 6,
+  "fields": {
+    "title": "Alice in Wonderland",
+    "release_date": "2010-03-03",
+    "description": "Alice, an unpretentious and individual 19-year-old, is betrothed to a dunce of an English nobleman. At her engagement party, she escapes the crowd to consider whether to go through with the marriage and falls down a hole in the garden after spotting an un",
+    "tmdb_id": 12155,
+    "image": "https://image.tmdb.org/t/p/w500/o0kre9wRCZz3jjSjaru7QU0UtFz.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 7,
+  "fields": {
+    "title": "Alien",
+    "release_date": "1979-05-25",
+    "description": "During its return to the earth, commercial spaceship Nostromo intercepts a distress signal from a distant planet. When a three-member team of the crew discovers a chamber containing thousands of eggs on the planet, a creature inside one of the eggs attack",
+    "tmdb_id": 348,
+    "image": "https://image.tmdb.org/t/p/w500/vfrQk5IPloGg1v9Rzbh2Eg3VGyM.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 8,
+  "fields": {
+    "title": "Aliens",
+    "release_date": "1986-07-18",
+    "description": "When Ripley's lifepod is found by a salvage crew over 50 years later, she finds that terra-formers are on the very planet they found the alien species. When the company sends a family of colonists out to investigate her story, all contact is lost with the",
+    "tmdb_id": 679,
+    "image": "https://image.tmdb.org/t/p/w500/r1x5JGpyqZU8PYhbs4UcrO1Xb6x.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 9,
+  "fields": {
+    "title": "American Beauty",
+    "release_date": "1999-09-15",
+    "description": "Lester Burnham, a depressed suburban father in a mid-life crisis, decides to turn his hectic life around after developing an infatuation with his daughter's attractive friend.",
+    "tmdb_id": 14,
+    "image": "https://image.tmdb.org/t/p/w500/6MNwC101wSEsDyxTJBGXsgIMlmh.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 10,
+  "fields": {
+    "title": "American History X",
+    "release_date": "1998-10-30",
+    "description": "Derek Vineyard is paroled after serving 3 years in prison for killing two thugs who tried to break into/steal his truck. Through his brother, Danny Vineyard's narration, we learn that before going to prison, Derek was a skinhead and the leader of a violen",
+    "tmdb_id": 73,
+    "image": "https://image.tmdb.org/t/p/w500/euypWkaYFOLW3e5rLIcTAjWnhhT.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 11,
+  "fields": {
+    "title": "Avatar",
+    "release_date": "2009-12-10",
+    "description": "In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.",
+    "tmdb_id": 19995,
+    "image": "https://image.tmdb.org/t/p/w500/kyeqWdyUXW608qlYkRqosgbbJyK.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 12,
+  "fields": {
+    "title": "Back to the Future",
+    "release_date": "1985-07-03",
+    "description": "Eighties teenager Marty McFly is accidentally sent back in time to 1955, inadvertently disrupting his parents' first meeting and attracting his mother's romantic interest. Marty must repair the damage to history by rekindling his parents' romance and - wi",
+    "tmdb_id": 105,
+    "image": "https://image.tmdb.org/t/p/w500/rej4R5DIdlx29I2soNePfInICG3.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 13,
+  "fields": {
+    "title": "Back to the Future Part II",
+    "release_date": "1989-11-20",
+    "description": "Marty and Doc are at it again in this wacky sequel to the 1985 blockbuster as the time-traveling duo head to 2015 to nip some McFly family woes in the bud. But things go awry thanks to bully Biff Tannen and a pesky sports almanac. In a last-ditch attempt ",
+    "tmdb_id": 165,
+    "image": "https://image.tmdb.org/t/p/w500/YBawEsTkUZBDajKbd5LiHkmMGf.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 14,
+  "fields": {
+    "title": "Batman Begins",
+    "release_date": "2005-06-10",
+    "description": "Driven by tragedy, billionaire Bruce Wayne dedicates his life to uncovering and defeating the corruption that plagues his home, Gotham City.  Unable to work within the system, he instead creates a new identity, a symbol of fear for the criminal underworld",
+    "tmdb_id": 272,
+    "image": "https://image.tmdb.org/t/p/w500/4MpN4kIEqUjW8OPtOQJXlTdHiJV.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 15,
+  "fields": {
+    "title": "Beauty and the Beast",
+    "release_date": "1991-11-13",
+    "description": "Follow the adventures of Belle, a bright young woman who finds herself in the castle of a prince who's been turned into a mysterious beast. With the help of the castle's enchanted staff, Belle soon learns the most important lesson of all -- that true beau",
+    "tmdb_id": 10020,
+    "image": "https://image.tmdb.org/t/p/w500/hUJ0UvQ5tgE2Z9WpfuduVSdiCiU.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 16,
+  "fields": {
+    "title": "Black Swan",
+    "release_date": "2010-12-02",
+    "description": "A ballet dancer wins the lead in \"Swan Lake\" and is perfect for the role of the delicate White Swan - Princess Odette - but slowly loses her mind as she becomes more and more like Odile, the Black Swan.",
+    "tmdb_id": 44214,
+    "image": "https://image.tmdb.org/t/p/w500/viWheBd44bouiLCHgNMvahLThqx.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 17,
+  "fields": {
+    "title": "Blade Runner",
+    "release_date": "1982-06-25",
+    "description": "In the smog-choked dystopian Los Angeles of 2019, blade runner Rick Deckard is called out of retirement to terminate a quartet of replicants who have escaped to Earth seeking their creator for a way to extend their short life spans.",
+    "tmdb_id": 78,
+    "image": "https://image.tmdb.org/t/p/w500/63N9uy8nd9j7Eog2axPQ8lbr3Wj.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 18,
+  "fields": {
+    "title": "Braveheart",
+    "release_date": "1995-05-24",
+    "description": "Enraged at the slaughter of Murron, his new bride and childhood love, Scottish warrior William Wallace slays a platoon of the local English lord's soldiers. This leads the village to revolt and, eventually, the entire country to rise up against English ru",
+    "tmdb_id": 197,
+    "image": "https://image.tmdb.org/t/p/w500/g8UItTLFApanO8rwDsl6qDjU9St.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 19,
+  "fields": {
+    "title": "Bruce Almighty",
+    "release_date": "2003-05-23",
+    "description": "Bruce Nolan toils as a \"human interest\" television reporter in Buffalo, N.Y. Despite his high ratings and the love of his beautiful girlfriend, Grace, Bruce remains unfulfilled. At the end of the worst day in his life, he angrily ridicules God -- and the ",
+    "tmdb_id": 310,
+    "image": "https://image.tmdb.org/t/p/w500/f0QqG14SZYYZcV4VWykVc5w13dz.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 20,
+  "fields": {
+    "title": "Cars",
+    "release_date": "2006-06-08",
+    "description": "Lightning McQueen, a hotshot rookie race car driven to succeed, discovers that life is about the journey, not the finish line, when he finds himself unexpectedly detoured in the sleepy Route 66 town of Radiator Springs. On route across the country to the ",
+    "tmdb_id": 920,
+    "image": "https://image.tmdb.org/t/p/w500/2Touk3m5gzsqr1VsvxypdyHY5ci.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 21,
+  "fields": {
+    "title": "Casino Royale",
+    "release_date": "2006-11-14",
+    "description": "Le Chiffre, a banker to the world's terrorists, is scheduled to participate in a high-stakes poker game in Montenegro, where he intends to use his winnings to establish his financial grip on the terrorist market. M sends Bond ‚Äì on his maiden mission as ",
+    "tmdb_id": 36557,
+    "image": "https://image.tmdb.org/t/p/w500/lMrxYKKhd4lqRzwUHAy5gcx9PSO.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 22,
+  "fields": {
+    "title": "Cast Away",
+    "release_date": "2000-12-22",
+    "description": "Chuck, a top international manager for FedEx, and Kelly, a Ph.D. student, are in love and heading towards marriage. Then Chuck's plane to Malaysia ditches at sea during a terrible storm. He's the only survivor, and he washes up on a tiny island with nothi",
+    "tmdb_id": 8358,
+    "image": "https://image.tmdb.org/t/p/w500/7lLJgKnAicAcR5UEuo8xhSMj18w.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 23,
+  "fields": {
+    "title": "Catch Me If You Can",
+    "release_date": "2002-12-25",
+    "description": "A true story about Frank Abagnale Jr. who, before his 19th birthday, successfully conned millions of dollars worth of checks as a Pan Am pilot, doctor, and legal prosecutor. An FBI agent makes it his mission to put him behind bars. But Frank not only elud",
+    "tmdb_id": 640,
+    "image": "https://image.tmdb.org/t/p/w500/sdYgEkKCDPWNU6KnoL4qd8xZ4w7.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 24,
+  "fields": {
+    "title": "Charlie and the Chocolate Factory",
+    "release_date": "2005-07-13",
+    "description": "A young boy wins a tour through the most magnificent chocolate factory in the world, led by the world's most unusual candy maker.",
+    "tmdb_id": 118,
+    "image": "https://image.tmdb.org/t/p/w500/reacYe4KrjYcMGUZnhPnkXHGH0s.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 25,
+  "fields": {
+    "title": "Despicable Me",
+    "release_date": "2010-07-08",
+    "description": "Villainous Gru lives up to his reputation as a despicable, deplorable and downright unlikable guy when he hatches a plan to steal the moon from the sky. But he has a tough time staying on task after three orphans land in his care.",
+    "tmdb_id": 20352,
+    "image": "https://image.tmdb.org/t/p/w500/9lOloREsAhBu0pEtU0BgeR1rHyo.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 26,
+  "fields": {
+    "title": "Die Hard",
+    "release_date": "1988-07-15",
+    "description": "NYPD cop, John McClane's plan to reconcile with his estranged wife is thrown for a serious loop when minutes after he arrives at her office, the entire building is overtaken by a group of terrorists. With little help from the LAPD, wisecracking McClane se",
+    "tmdb_id": 562,
+    "image": "https://image.tmdb.org/t/p/w500/1NnCbaFaWgHczKjH5Eii46VmpPp.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 27,
+  "fields": {
+    "title": "District 9",
+    "release_date": "2009-08-05",
+    "description": "Aliens land in South Africa and, with their ship totally disabled,  have no way home. Years later, after living in a slum and wearing out their welcome the 'Non-Humans' are being moved to a new tent city overseen by Multi-National United (MNU).",
+    "tmdb_id": 17654,
+    "image": "https://image.tmdb.org/t/p/w500/tuGlQkqLxnodDSk6mp5c2wvxUEd.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 28,
+  "fields": {
+    "title": "Donnie Darko",
+    "release_date": "2001-01-18",
+    "description": "After narrowly escaping a bizarre accident, a troubled teenager is plagued by visions of a large bunny rabbit that manipulates him to commit a series of crimes.",
+    "tmdb_id": 141,
+    "image": "https://image.tmdb.org/t/p/w500/6FKym4sm5LcqUC80HNpn2ejVoro.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 29,
+  "fields": {
+    "title": "E.T. the Extra-Terrestrial",
+    "release_date": "1982-04-03",
+    "description": "After a gentle alien becomes stranded on Earth, the being is discovered and befriended by a young boy named Elliott. Bringing the extraterrestrial into his suburban California house, Elliott introduces E.T., as the alien is dubbed, to his brother and his ",
+    "tmdb_id": 601,
+    "image": "https://image.tmdb.org/t/p/w500/an0nD6uq6byfxXCfk6lQBzdL2J1.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 30,
+  "fields": {
+    "title": "Edward Scissorhands",
+    "release_date": "1990-12-05",
+    "description": "A small suburban town receives a visit from a castaway unfinished science experiment named Edward.",
+    "tmdb_id": 162,
+    "image": "https://image.tmdb.org/t/p/w500/e0FqKFvGPdQNWG8tF9cZBtev9Em.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 31,
+  "fields": {
+    "title": "Eternal Sunshine of the Spotless Mind",
+    "release_date": "2004-03-19",
+    "description": "Joel Barish, heartbroken that his girlfriend underwent a procedure to erase him from her memory, decides to do the same. However, as he watches his memories of her fade away, he realises that he still loves her, and may be too late to correct his mistake.",
+    "tmdb_id": 38,
+    "image": "https://image.tmdb.org/t/p/w500/5MwkWH9tYHv3mV9OdYTMR5qreIz.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 32,
+  "fields": {
+    "title": "Fight Club",
+    "release_date": "1999-10-15",
+    "description": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites a",
+    "tmdb_id": 550,
+    "image": "https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 33,
+  "fields": {
+    "title": "Finding Nemo",
+    "release_date": "2003-05-30",
+    "description": "Nemo, an adventurous young clownfish, is unexpectedly taken from his Great Barrier Reef home to a dentist's office aquarium. It's up to his worrisome father Marlin and a friendly but forgetful fish Dory to bring Nemo home -- meeting vegetarian sharks, sur",
+    "tmdb_id": 12,
+    "image": "https://image.tmdb.org/t/p/w500/eHuGQ10FUzK1mdOY69wF5pGgEf5.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 34,
+  "fields": {
+    "title": "Forrest Gump",
+    "release_date": "1994-07-06",
+    "description": "A man with a low IQ has accomplished great things in his life and been present during significant historic events - in each case, far exceeding what anyone imagined he could do. Yet, despite all the things he has attained, his one true love eludes him. 'F",
+    "tmdb_id": 13,
+    "image": "https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 35,
+  "fields": {
+    "title": "Gladiator",
+    "release_date": "2000-05-01",
+    "description": "In the year 180, the death of emperor Marcus Aurelius throws the Roman Empire into chaos. Maximus is one of the Roman army's most capable and trusted generals and a key advisor to the emperor. As Marcus' devious son Commodus ascends to the throne, Maximus",
+    "tmdb_id": 98,
+    "image": "https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 36,
+  "fields": {
+    "title": "GoodFellas",
+    "release_date": "1990-09-12",
+    "description": "The true story of Henry Hill, a half-Irish, half-Sicilian Brooklyn kid who is adopted by neighbourhood gangsters at an early age and climbs the ranks of a Mafia family under the guidance of Jimmy Conway.",
+    "tmdb_id": 769,
+    "image": "https://image.tmdb.org/t/p/w500/aKuFiU82s5ISJpGZp7YkIr3kCUd.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 37,
+  "fields": {
+    "title": "Gran Torino",
+    "release_date": "2008-12-09",
+    "description": "Walt Kowalski is a widower who holds onto his prejudices despite the changes in his Michigan neighborhood and the world around him. Kowalski is a grumpy, tough-minded, unhappy old man who can't get along with either his kids or his neighbors. He is a Kore",
+    "tmdb_id": 13223,
+    "image": "https://image.tmdb.org/t/p/w500/zUybYvxWdAJy5hhYovsXtHSWI1l.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 38,
+  "fields": {
+    "title": "Hancock",
+    "release_date": "2008-07-01",
+    "description": "Hancock is a down-and-out superhero who's forced to employ a PR expert to help repair his image when the public grows weary of all the damage he's inflicted during his lifesaving heroics. The agent's idea of imprisoning the antihero to make the world miss",
+    "tmdb_id": 8960,
+    "image": "https://image.tmdb.org/t/p/w500/7DyuV2G0hLEqHeueDfOqhZ2DVut.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 39,
+  "fields": {
+    "title": "Harry Potter and the Chamber of Secrets",
+    "release_date": "2002-11-13",
+    "description": "Ignoring threats to his life, Harry returns to Hogwarts to investigate ‚Äì aided by Ron and Hermione ‚Äì a mysterious series of attacks.",
+    "tmdb_id": 672,
+    "image": "https://image.tmdb.org/t/p/w500/sdEOH0992YZ0QSxgXNIGLq1ToUi.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 40,
+  "fields": {
+    "title": "Harry Potter and the Deathly Hallows: Part 1",
+    "release_date": "2010-10-17",
+    "description": "Harry, Ron and Hermione walk away from their last year at Hogwarts to find and destroy the remaining Horcruxes, putting an end to Voldemort's bid for immortality. But with Harry's beloved Dumbledore dead and Voldemort's unscrupulous Death Eaters on the lo",
+    "tmdb_id": 12444,
+    "image": "https://image.tmdb.org/t/p/w500/iGoXIpQb7Pot00EEdwpwPajheZ5.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 41,
+  "fields": {
+    "title": "Harry Potter and the Goblet of Fire",
+    "release_date": "2005-11-05",
+    "description": "Harry starts his fourth year at Hogwarts, competes in the treacherous Triwizard Tournament and faces the evil Lord Voldemort. Ron and Hermione help Harry manage the pressure ‚Äì but Voldemort lurks, awaiting his chance to destroy Harry and all that he sta",
+    "tmdb_id": 674,
+    "image": "https://image.tmdb.org/t/p/w500/fECBtHlr0RB3foNHDiCBXeg9Bv9.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 42,
+  "fields": {
+    "title": "Harry Potter and the Half-Blood Prince",
+    "release_date": "2009-07-07",
+    "description": "As Harry begins his sixth year at Hogwarts, he discovers an old book marked as 'Property of the Half-Blood Prince', and begins to learn more about Lord Voldemort's dark past.",
+    "tmdb_id": 767,
+    "image": "https://image.tmdb.org/t/p/w500/z7uo9zmQdQwU5ZJHFpv2Upl30i1.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 43,
+  "fields": {
+    "title": "Harry Potter and the Order of the Phoenix",
+    "release_date": "2007-06-28",
+    "description": "Returning for his fifth year of study at Hogwarts, Harry is stunned to find that his warnings about the return of Lord Voldemort have been ignored. Left with no choice, Harry takes matters into his own hands, training a small group of students ‚Äì dubbed ",
+    "tmdb_id": 675,
+    "image": "https://image.tmdb.org/t/p/w500/5aOyriWkPec0zUDxmHFP9qMmBaj.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 44,
+  "fields": {
+    "title": "Harry Potter and the Philosopher's Stone",
+    "release_date": "2001-11-16",
+    "description": "Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard -- with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry. As he learns to harness his",
+    "tmdb_id": 671,
+    "image": "https://image.tmdb.org/t/p/w500/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 45,
+  "fields": {
+    "title": "Harry Potter and the Prisoner of Azkaban",
+    "release_date": "2004-05-31",
+    "description": "Harry, Ron and Hermione return to Hogwarts for another magic-filled year. Harry comes face to face with danger yet again, this time in the form of escaped convict, Sirius Black ‚Äì and turns to sympathetic Professor Lupin for help.",
+    "tmdb_id": 673,
+    "image": "https://image.tmdb.org/t/p/w500/aWxwnYoe8p2d2fcxOqtvAtJ72Rw.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 46,
+  "fields": {
+    "title": "How to Train Your Dragon",
+    "release_date": "2010-03-05",
+    "description": "As the son of a Viking leader on the cusp of manhood, shy Hiccup Horrendous Haddock III faces a rite of passage: he must kill a dragon to prove his warrior mettle. But after downing a feared dragon, he realizes that he no longer wants to destroy it, and i",
+    "tmdb_id": 10191,
+    "image": "https://image.tmdb.org/t/p/w500/ygGmAO60t8GyqUo9xYeYxSZAR3b.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 47,
+  "fields": {
+    "title": "I Am Legend",
+    "release_date": "2007-12-14",
+    "description": "Robert Neville is a scientist who was unable to stop the spread of the terrible virus that was incurable and man-made. Immune, Neville is now the last human survivor in what is left of New York City and perhaps the world. For three years, Neville has fait",
+    "tmdb_id": 6479,
+    "image": "https://image.tmdb.org/t/p/w500/iPDkaSdKk2jRLTM65UOEoKtsIZ8.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 48,
+  "fields": {
+    "title": "I, Robot",
+    "release_date": "2004-07-15",
+    "description": "In 2035, where robots are common-place and abide by the three laws of robotics, a techno-phobic cop investigates an apparent suicide. Suspecting that a robot may be responsible for the death, his investigation leads him to believe that humanity may be in ",
+    "tmdb_id": 2048,
+    "image": "https://image.tmdb.org/t/p/w500/efwv6F2lGaghjPpBRSINHtoEiZB.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 49,
+  "fields": {
+    "title": "Ice Age",
+    "release_date": "2002-03-10",
+    "description": "With the impending ice age almost upon them, a mismatched trio of prehistoric critters ‚Äì Manny the woolly mammoth, Diego the saber-toothed tiger and Sid the giant sloth ‚Äì find an orphaned infant and decide to return it to its human parents. Along the ",
+    "tmdb_id": 425,
+    "image": "https://image.tmdb.org/t/p/w500/gLhHHZUzeseRXShoDyC4VqLgsNv.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 50,
+  "fields": {
+    "title": "Ice Age: The Meltdown",
+    "release_date": "2006-03-23",
+    "description": "Diego, Manny and Sid return in this sequel to the hit animated movie Ice Age. This time around, the deep freeze is over, and the ice-covered earth is starting to melt, which will destroy the trio's cherished valley. The impending disaster prompts them to ",
+    "tmdb_id": 950,
+    "image": "https://image.tmdb.org/t/p/w500/zDduhCHasKQ9YOTvlOreHem7Wbi.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 51,
+  "fields": {
+    "title": "Inception",
+    "release_date": "2010-07-14",
+    "description": "Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: \"inception\", the implantation of another person's idea into",
+    "tmdb_id": 27205,
+    "image": "https://image.tmdb.org/t/p/w500/oYuLEt3zVCKq57qu2F8dT7NIa6f.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 52,
+  "fields": {
+    "title": "Independence Day",
+    "release_date": "1996-06-25",
+    "description": "On July 2, a giant alien mothership enters orbit around Earth and deploys several dozen saucer-shaped 'destroyer' spacecraft that quickly lay waste to major cities around the planet. On July 3, the United States conducts a coordinated counterattack that f",
+    "tmdb_id": 602,
+    "image": "https://image.tmdb.org/t/p/w500/p0BPQGSPoSa8Ml0DAf2mB2kCU0R.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 53,
+  "fields": {
+    "title": "Indiana Jones and the Last Crusade",
+    "release_date": "1989-05-24",
+    "description": "When Dr. Henry Jones Sr. suddenly goes missing while pursuing the Holy Grail, eminent archaeologist Indiana must team up with Marcus Brody, Sallah and Elsa Schneider to follow in his father's footsteps and stop the Nazis from recovering the power of etern",
+    "tmdb_id": 89,
+    "image": "https://image.tmdb.org/t/p/w500/sizg1AU8f8JDZX4QIgE4pjUMBvx.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 54,
+  "fields": {
+    "title": "Inglourious Basterds",
+    "release_date": "2009-08-18",
+    "description": "In Nazi-occupied France during World War II, a group of Jewish-American soldiers known as \"The Basterds\" are chosen specifically to spread fear throughout the Third Reich by scalping and brutally killing Nazis. The Basterds, lead by Lt. Aldo Raine soon cr",
+    "tmdb_id": 16869,
+    "image": "https://image.tmdb.org/t/p/w500/7sfbEnaARXDDhKm0CZ7D7uc2sbo.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 55,
+  "fields": {
+    "title": "Into the Wild",
+    "release_date": "2007-09-11",
+    "description": "The true story of top student and athlete, Christopher McCandless, who after graduating from Emory University in 1992, abandoned his possessions, gave his entire $24,000 savings account to charity and hitchhiked to Alaska to live in the wilderness.",
+    "tmdb_id": 5915,
+    "image": "https://image.tmdb.org/t/p/w500/jnLnLYP5pGDfri04gxtAqAvkHMw.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 56,
+  "fields": {
+    "title": "Iron Man",
+    "release_date": "2008-04-30",
+    "description": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+    "tmdb_id": 1726,
+    "image": "https://image.tmdb.org/t/p/w500/78lPtwv72eTNqFW9COBYI0dWDJa.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 57,
+  "fields": {
+    "title": "Iron Man 2",
+    "release_date": "2010-04-28",
+    "description": "With the world now aware of his dual life as the armored superhero Iron Man, billionaire inventor Tony Stark faces pressure from the government, the press and the public to share his technology with the military. Unwilling to let go of his invention, Star",
+    "tmdb_id": 10138,
+    "image": "https://image.tmdb.org/t/p/w500/6WBeq4fCfn7AN0o21W9qNcRF2l9.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 58,
+  "fields": {
+    "title": "Jurassic Park",
+    "release_date": "1993-06-11",
+    "description": "A wealthy entrepreneur secretly creates a theme park featuring living dinosaurs drawn from prehistoric DNA. Before opening day, he invites a team of experts and his two eager grandchildren to experience the park and help calm anxious investors. However, t",
+    "tmdb_id": 329,
+    "image": "https://image.tmdb.org/t/p/w500/fjTU1Bgh3KJu4aatZil3sofR2zC.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 59,
+  "fields": {
+    "title": "Kick-Ass",
+    "release_date": "2010-03-22",
+    "description": "Dave Lizewski is an unnoticed high school student and comic book fan who one day decides to become a super-hero, even though he has no powers, training or meaningful reason to do so.",
+    "tmdb_id": 23483,
+    "image": "https://image.tmdb.org/t/p/w500/iHMbrTHJwocsNvo5murCBw0CwTo.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 60,
+  "fields": {
+    "title": "Kill Bill: Vol. 1",
+    "release_date": "2003-10-10",
+    "description": "An assassin is shot at the altar by her ruthless employer, Bill and other members of their assassination circle ‚Äì but 'The Bride' lives to plot her vengeance. Setting out for some payback, she makes a death list and hunts down those who wronged her, sav",
+    "tmdb_id": 24,
+    "image": "https://image.tmdb.org/t/p/w500/9yaVKBwvbvq3qL8zzSmuoxZuoFK.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 61,
+  "fields": {
+    "title": "Kill Bill: Vol. 2",
+    "release_date": "2004-04-16",
+    "description": "The Bride unwaveringly continues on her roaring rampage of revenge against the band of assassins who had tried to kill her and her unborn child. She visits each of her former associates one-by-one, checking off the victims on her Death List Five until the",
+    "tmdb_id": 393,
+    "image": "https://image.tmdb.org/t/p/w500/2yhg0mZQMhDyvUQ4rG1IZ4oIA8L.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 62,
+  "fields": {
+    "title": "Kung Fu Panda",
+    "release_date": "2008-06-04",
+    "description": "When the Valley of Peace is threatened, lazy Po the panda discovers his destiny as the \"chosen one\" and trains to become a kung fu hero, but transforming the unsleek slacker into a brave warrior won't be easy. It's up to Master Shifu and the Furious Five ",
+    "tmdb_id": 9502,
+    "image": "https://image.tmdb.org/t/p/w500/wWt4JYXTg5Wr3xBW2phBrMKgp3x.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 63,
+  "fields": {
+    "title": "Madagascar",
+    "release_date": "2005-05-25",
+    "description": "Zoo animals leave the comforts of man-made habitats for exotic adventure in this animated family film. After escaping from the zoo, four friends -- a lion, a hippo, a zebra and a giraffe -- are sent back to Africa. When their ship capsizes, stranding them",
+    "tmdb_id": 953,
+    "image": "https://image.tmdb.org/t/p/w500/zMpJY5CJKUufG9OTw0In4eAFqPX.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 64,
+  "fields": {
+    "title": "Memento",
+    "release_date": "2000-10-11",
+    "description": "Suffering short-term memory loss after a head injury, Leonard Shelby embarks on a grim quest to find the lowlife who murdered his wife in this gritty, complex thriller that packs more knots than a hangman's noose. To carry out his plan, Shelby snaps Polar",
+    "tmdb_id": 77,
+    "image": "https://image.tmdb.org/t/p/w500/nWtySDlffTfwAa0rSfq61o33ZXV.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 65,
+  "fields": {
+    "title": "Men in Black",
+    "release_date": "1997-07-02",
+    "description": "Men in Black follows the exploits of agents Kay and Jay, members of a top-secret organization established to monitor and police alien activity on Earth. The two Men in Black find themselves in the middle of the deadly plot by an intergalactic terrorist wh",
+    "tmdb_id": 607,
+    "image": "https://image.tmdb.org/t/p/w500/uLOmOF5IzWoyrgIF5MfUnh5pa1X.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 66,
+  "fields": {
+    "title": "Men in Black II",
+    "release_date": "2002-07-03",
+    "description": "Kay and Jay reunite to provide our best, last and only line of defense against a sinister seductress who levels the toughest challenge yet to the MIB's untarnished mission statement ‚Äì protecting Earth from the scum of the universe. It's been four years ",
+    "tmdb_id": 608,
+    "image": "https://image.tmdb.org/t/p/w500/enA22EPyzc2WQ1VVyY7zxresQQr.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 67,
+  "fields": {
+    "title": "Monsters, Inc.",
+    "release_date": "2001-11-01",
+    "description": "James Sullivan and Mike Wazowski are monsters, they earn their living scaring children and are the best in the business... even though they're more afraid of the children than they are of them. When a child accidentally enters their world, James and Mike ",
+    "tmdb_id": 585,
+    "image": "https://image.tmdb.org/t/p/w500/qjlbN6aK1qgeg3SspFVovT2D1Me.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 68,
+  "fields": {
+    "title": "Mr. & Mrs. Smith",
+    "release_date": "2005-06-07",
+    "description": "After five (or six) years of vanilla-wedded bliss, ordinary suburbanites John and Jane Smith are stuck in a huge rut. Unbeknownst to each other, they are both coolly lethal, highly-paid assassins working for rival organisations. When they discover they're",
+    "tmdb_id": 787,
+    "image": "https://image.tmdb.org/t/p/w500/kjD700RtyhveN3ZbOnSvUSne0Qj.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 69,
+  "fields": {
+    "title": "No Country for Old Men",
+    "release_date": "2007-11-08",
+    "description": "Llewelyn Moss stumbles upon dead bodies, $2 million and a hoard of heroin in a Texas desert, but methodical killer Anton Chigurh comes looking for it, with local sheriff Ed Tom Bell hot on his trail. The roles of prey and predator blur as the violent purs",
+    "tmdb_id": 6977,
+    "image": "https://image.tmdb.org/t/p/w500/bj1v6YKF8yHqA489VFfnQvOJpnc.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 70,
+  "fields": {
+    "title": "Ocean's Eleven",
+    "release_date": "2001-12-07",
+    "description": "Less than 24 hours into his parole, charismatic thief Danny Ocean is already rolling out his next plan: In one night, Danny's hand-picked crew of specialists will attempt to steal more than $150 million from three Las Vegas casinos. But to score the cash,",
+    "tmdb_id": 161,
+    "image": "https://image.tmdb.org/t/p/w500/hQQCdZrsHtZyR6NbKH2YyCqd2fR.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 71,
+  "fields": {
+    "title": "One Flew Over the Cuckoo's Nest",
+    "release_date": "1975-11-18",
+    "description": "While serving time for insanity at a state mental hospital, implacable rabble-rouser, Randle Patrick McMurphy inspires his fellow patients to rebel against the authoritarian rule of head nurse, Mildred Ratched.",
+    "tmdb_id": 510,
+    "image": "https://image.tmdb.org/t/p/w500/kjWsMh72V6d8KRLV4EOoSJLT1H7.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 72,
+  "fields": {
+    "title": "Pirates of the Caribbean: At World's End",
+    "release_date": "2007-05-19",
+    "description": "Captain Barbossa, long believed to be dead, has come back to life and is headed to the edge of the Earth with Will Turner and Elizabeth Swann. But nothing is quite as it seems.",
+    "tmdb_id": 285,
+    "image": "https://image.tmdb.org/t/p/w500/jGWpG4YhpQwVmjyHEGkxEkeRf0S.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 73,
+  "fields": {
+    "title": "Pirates of the Caribbean: Dead Man's Chest",
+    "release_date": "2006-06-20",
+    "description": "Captain Jack Sparrow works his way out of a blood debt with the ghostly Davey Jones, he also attempts to avoid eternal damnation.",
+    "tmdb_id": 58,
+    "image": "https://image.tmdb.org/t/p/w500/uXEqmloGyP7UXAiphJUu2v2pcuE.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 74,
+  "fields": {
+    "title": "Pirates of the Caribbean: The Curse of the Black Pearl",
+    "release_date": "2003-07-09",
+    "description": "Jack Sparrow, a freewheeling 17th-century pirate who roams the Caribbean Sea, butts heads with a rival pirate bent on pillaging the village of Port Royal. When the governor's daughter is kidnapped, Sparrow decides to help the girl's love save her. But the",
+    "tmdb_id": 22,
+    "image": "https://image.tmdb.org/t/p/w500/z8onk7LV9Mmw6zKz4hT6pzzvmvl.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 75,
+  "fields": {
+    "title": "Pulp Fiction",
+    "release_date": "1994-09-10",
+    "description": "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper. Their adventures unfurl in three stories that ingeniously trip back and forth in time.",
+    "tmdb_id": 680,
+    "image": "https://image.tmdb.org/t/p/w500/jYqKxBbAUdfKq3BfHKivJytFiPL.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 76,
+  "fields": {
+    "title": "Quantum of Solace",
+    "release_date": "2008-10-30",
+    "description": "Quantum of Solace continues the adventures of James Bond after Casino Royale. Betrayed by Vesper, the woman he loved, 007 fights the urge to make his latest mission personal. Pursuing his determination to uncover the truth, Bond and M interrogate Mr. Whit",
+    "tmdb_id": 10764,
+    "image": "https://image.tmdb.org/t/p/w500/e3DXXLJHGqMx9yYpXsql1XNljmM.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 77,
+  "fields": {
+    "title": "Raiders of the Lost Ark",
+    "release_date": "1981-06-12",
+    "description": "When Dr. Indiana Jones ‚Äì the tweed-suited professor who just happens to be a celebrated archaeologist ‚Äì is hired by the government to locate the legendary Ark of the Covenant, he finds himself up against the entire Nazi regime.",
+    "tmdb_id": 85,
+    "image": "https://image.tmdb.org/t/p/w500/ceG9VzoRAVGwivFU403Wc3AHRys.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 78,
+  "fields": {
+    "title": "Ratatouille",
+    "release_date": "2007-06-22",
+    "description": "A rat named Remy dreams of becoming a great French chef despite his family's wishes and the obvious problem of being a rat in a decidedly rodent-phobic profession. When fate places Remy in the sewers of Paris, he finds himself ideally situated beneath a r",
+    "tmdb_id": 2062,
+    "image": "https://image.tmdb.org/t/p/w500/t3vaWRPSf6WjDSamIkKDs1iQWna.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 79,
+  "fields": {
+    "title": "Reservoir Dogs",
+    "release_date": "1992-09-02",
+    "description": "A botched robbery indicates a police informant, and the pressure mounts in the aftermath at a warehouse. Crime begets violence as the survivors -- veteran Mr. White, newcomer Mr. Orange, psychopathic parolee Mr. Blonde, bickering weasel Mr. Pink and Nice ",
+    "tmdb_id": 500,
+    "image": "https://image.tmdb.org/t/p/w500/xi8Iu6qyTfyZVDVy60raIOYJJmk.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 80,
+  "fields": {
+    "title": "Return of the Jedi",
+    "release_date": "1983-05-23",
+    "description": "As Rebel leaders map their strategy for an all-out attack on the Emperor's newer, bigger Death Star. Han Solo remains frozen in the cavernous desert fortress of Jabba the Hutt, the most loathsome outlaw in the universe, who is also keeping Princess Leia a",
+    "tmdb_id": 1892,
+    "image": "https://image.tmdb.org/t/p/w500/jQYlydvHm3kUix1f8prMucrplhm.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 81,
+  "fields": {
+    "title": "Saving Private Ryan",
+    "release_date": "1998-07-24",
+    "description": "As U.S. troops storm the beaches of Normandy, three brothers lie dead on the battlefield, with a fourth trapped behind enemy lines. Ranger captain John Miller and seven men are tasked with penetrating German-held territory and bringing the boy home.",
+    "tmdb_id": 857,
+    "image": "https://image.tmdb.org/t/p/w500/1wY4psJ5NVEhCuOYROwLH2XExM2.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 82,
+  "fields": {
+    "title": "Scarface",
+    "release_date": "1983-12-08",
+    "description": "After getting a green card in exchange for assassinating a Cuban government official, Tony Montana stakes a claim on the drug trade in Miami. Viciously murdering anyone who stands in his way, Tony eventually becomes the biggest drug lord in the state, con",
+    "tmdb_id": 111,
+    "image": "https://image.tmdb.org/t/p/w500/iQ5ztdjvteGeboxtmRdXEChJOHh.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 83,
+  "fields": {
+    "title": "Schindler's List",
+    "release_date": "1993-11-29",
+    "description": "The true story of how businessman Oskar Schindler saved over a thousand Jewish lives from the Nazis while they worked as slaves in his factory during World War II.",
+    "tmdb_id": 424,
+    "image": "https://image.tmdb.org/t/p/w500/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 84,
+  "fields": {
+    "title": "Se7en",
+    "release_date": "1995-09-22",
+    "description": "Two homicide detectives are on a desperate hunt for a serial killer whose crimes are based on the \"seven deadly sins\" in this dark and haunting film that takes viewers from the tortured remains of one victim to the next. The seasoned Det. Sommerset resear",
+    "tmdb_id": 807,
+    "image": "https://image.tmdb.org/t/p/w500/191nKfP0ehp3uIvWqgPbFmI4lv9.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 85,
+  "fields": {
+    "title": "Sherlock Holmes",
+    "release_date": "2009-12-23",
+    "description": "Eccentric consulting detective, Sherlock Holmes and Doctor John Watson battle to bring down a new nemesis and unravel a deadly plot that could destroy England.",
+    "tmdb_id": 10528,
+    "image": "https://image.tmdb.org/t/p/w500/fvnu6QHyR0gSV1JI6lMyXCny21a.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 86,
+  "fields": {
+    "title": "Shrek",
+    "release_date": "2001-05-16",
+    "description": "It ain't easy bein' green -- especially if you're a likable (albeit smelly) ogre named Shrek. On a mission to retrieve a gorgeous princess from the clutches of a fire-breathing dragon, Shrek teams up with an unlikely compatriot -- a wisecracking donkey.",
+    "tmdb_id": 808,
+    "image": "https://image.tmdb.org/t/p/w500/iB64vpL3dIObOtMZgX3RqdVdQDc.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 87,
+  "fields": {
+    "title": "Shrek 2",
+    "release_date": "2004-05-19",
+    "description": "Shrek, Fiona and Donkey set off to Far, Far Away to meet Fiona's mother and father. But not everyone is happy. Shrek and the King find it hard to get along, and there's tension in the marriage. The fairy godmother discovers that Shrek has married Fiona in",
+    "tmdb_id": 809,
+    "image": "https://image.tmdb.org/t/p/w500/2yYP0PQjG8zVqturh1BAqu2Tixl.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 88,
+  "fields": {
+    "title": "Shutter Island",
+    "release_date": "2010-02-18",
+    "description": "World War II soldier-turned-U.S. Marshal Teddy Daniels investigates the disappearance of a patient from a hospital for the criminally insane, but his efforts are compromised by his troubling visions and also by a mysterious doctor.",
+    "tmdb_id": 11324,
+    "image": "https://image.tmdb.org/t/p/w500/nrmXQ0zcZUL8jFLrakWc90IR8z9.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 89,
+  "fields": {
+    "title": "Spider-Man",
+    "release_date": "2002-05-01",
+    "description": "After being bitten by a genetically altered spider, nerdy high school student Peter Parker is endowed with amazing powers.",
+    "tmdb_id": 557,
+    "image": "https://image.tmdb.org/t/p/w500/gh4cZbhZxyTbgxQPxD0dOudNPTn.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 90,
+  "fields": {
+    "title": "Spider-Man 2",
+    "release_date": "2004-06-25",
+    "description": "Peter Parker is going through a major identity crisis. Burned out from being Spider-Man, he decides to shelve his superhero alter ego, which leaves the city suffering in the wake of carnage left by the evil Doc Ock. In the meantime, Parker still can't act",
+    "tmdb_id": 558,
+    "image": "https://image.tmdb.org/t/p/w500/olxpyq9kJAZ2NU1siLshhhXEPR7.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 91,
+  "fields": {
+    "title": "Star Trek",
+    "release_date": "2009-05-06",
+    "description": "The fate of the galaxy rests in the hands of bitter rivals. One, James Kirk, is a delinquent, thrill-seeking Iowa farm boy. The other, Spock, a Vulcan, was raised in a logic-based society that rejects all emotion. As fiery instinct clashes with calm reaso",
+    "tmdb_id": 13475,
+    "image": "https://image.tmdb.org/t/p/w500/lV5OpzAss1z06YNagOVap1I35mH.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 92,
+  "fields": {
+    "title": "Star Wars",
+    "release_date": "1977-05-25",
+    "description": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beauti",
+    "tmdb_id": 11,
+    "image": "https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 93,
+  "fields": {
+    "title": "Star Wars: Episode I - The Phantom Menace",
+    "release_date": "1999-05-19",
+    "description": "Anakin Skywalker, a young slave strong with the Force, is discovered on Tatooine. Meanwhile, the evil Sith have returned, enacting their plot for revenge against the Jedi.",
+    "tmdb_id": 1893,
+    "image": "https://image.tmdb.org/t/p/w500/x5jfgaL2N3TpwUNuMwkfQi6Jev8.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 94,
+  "fields": {
+    "title": "Star Wars: Episode II - Attack of the Clones",
+    "release_date": "2002-05-15",
+    "description": "Ten years after the invasion of Naboo, the galaxy is on the brink of civil war. Under the leadership of a renegade Jedi named Count Dooku, thousands of solar systems threaten to break away from the Galactic Republic. When an assassination attempt is made ",
+    "tmdb_id": 1894,
+    "image": "https://image.tmdb.org/t/p/w500/oZNPzxqM2s5DyVWab09NTQScDQt.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 95,
+  "fields": {
+    "title": "Star Wars: Episode III - Revenge of the Sith",
+    "release_date": "2005-05-17",
+    "description": "Years after the onset of the Clone Wars, the noble Jedi Knights lead a massive clone army into a galaxy-wide battle against the Separatists. When the sinister Sith unveil a thousand-year-old plot to rule the galaxy, the Republic crumbles and from its ashe",
+    "tmdb_id": 1895,
+    "image": "https://image.tmdb.org/t/p/w500/xfSAoBEm9MNBjmlNcDYLvLSMlnq.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 96,
+  "fields": {
+    "title": "Taken",
+    "release_date": "2008-02-18",
+    "description": "While vacationing with a friend in Paris, an American girl is kidnapped by a gang of human traffickers intent on selling her into forced prostitution. Working against the clock, her ex-spy father must pull out all the stops to save her. But with his best ",
+    "tmdb_id": 8681,
+    "image": "https://image.tmdb.org/t/p/w500/y5Va1WXDX6nZElVirPrGxf6w99B.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 97,
+  "fields": {
+    "title": "Tangled",
+    "release_date": "2010-11-24",
+    "description": "When the kingdom's most wanted-and most charming-bandit Flynn Rider hides out in a mysterious tower, he's taken hostage by Rapunzel, a beautiful and feisty tower-bound teen with 70 feet of magical, golden hair. Flynn's curious captor, who's looking for he",
+    "tmdb_id": 38757,
+    "image": "https://image.tmdb.org/t/p/w500/ym7Kst6a4uodryxqbGOxmewF235.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 98,
+  "fields": {
+    "title": "Terminator 2: Judgment Day",
+    "release_date": "1991-07-01",
+    "description": "Nearly 10 years have passed since Sarah Connor was targeted for termination by a cyborg from the future. Now her son, John, the future leader of the resistance, is the target for a newer, more deadly terminator. Once again, the resistance has managed to s",
+    "tmdb_id": 280,
+    "image": "https://image.tmdb.org/t/p/w500/5M0j0B18abtBI5gi2RhfjjurTqb.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 99,
+  "fields": {
+    "title": "The Big Lebowski",
+    "release_date": "1998-03-06",
+    "description": "Jeffrey \"The Dude\" Lebowski, a Los Angeles slacker who only wants to bowl and drink white Russians, is mistaken for another Jeffrey Lebowski, a wheelchair-bound millionaire, and finds himself dragged into a strange series of events involving nihilists, ad",
+    "tmdb_id": 115,
+    "image": "https://image.tmdb.org/t/p/w500/9mprbw31MGdd66LR0AQKoDMoFRv.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 100,
+  "fields": {
+    "title": "The Bourne Identity",
+    "release_date": "2002-06-14",
+    "description": "Wounded to the brink of death and suffering from amnesia, Jason Bourne is rescued at sea by a fisherman. With nothing to go on but a Swiss bank account number, he starts to reconstruct his life, but finds that many people he encounters want him dead. Howe",
+    "tmdb_id": 2501,
+    "image": "https://image.tmdb.org/t/p/w500/aP8swke3gmowbkfZ6lmNidu0y9p.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 101,
+  "fields": {
+    "title": "The Curious Case of Benjamin Button",
+    "release_date": "2008-11-24",
+    "description": "Tells the story of Benjamin Button, a man who starts aging backwards with bizarre consequences.",
+    "tmdb_id": 4922,
+    "image": "https://image.tmdb.org/t/p/w500/26wEWZYt6yJkwRVkjcbwJEFh9IS.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 102,
+  "fields": {
+    "title": "The Dark Knight",
+    "release_date": "2008-07-16",
+    "description": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets. The partnership proves to be effective, but they so",
+    "tmdb_id": 155,
+    "image": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 103,
+  "fields": {
+    "title": "The Departed",
+    "release_date": "2006-10-05",
+    "description": "To take down South Boston's Irish Mafia, the police send in one of their own to infiltrate the underworld, not realizing the syndicate has done likewise. While an undercover cop curries favor with the mob kingpin, a career criminal rises through the polic",
+    "tmdb_id": 1422,
+    "image": "https://image.tmdb.org/t/p/w500/nT97ifVT2J1yMQmeq20Qblg61T.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 104,
+  "fields": {
+    "title": "The Devil Wears Prada",
+    "release_date": "2006-06-30",
+    "description": "The Devil Wears Prada is about a young journalist who moves to New York to work in the fashion industry. Her boss however is extremely demanding and cruel and won‚Äôt let her succeed if she doesn‚Äôt fit into the high class elegant look of their magazine ",
+    "tmdb_id": 350,
+    "image": "https://image.tmdb.org/t/p/w500/1LwW0W0Zyik00OmQPTnCUjmCh1C.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 105,
+  "fields": {
+    "title": "The Empire Strikes Back",
+    "release_date": "1980-05-17",
+    "description": "The epic saga continues as Luke Skywalker, in hopes of defeating the evil Galactic Empire, learns the ways of the Jedi from aging master Yoda. But Darth Vader is more determined than ever to capture Luke. Meanwhile, rebel leader Princess Leia, cocky Han S",
+    "tmdb_id": 1891,
+    "image": "https://image.tmdb.org/t/p/w500/nNAeTmF4CtdSgMDplXTDPOpYzsX.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 106,
+  "fields": {
+    "title": "The Fast and the Furious",
+    "release_date": "2001-06-22",
+    "description": "Domenic Toretto is a Los Angeles street racer suspected of masterminding a series of big-rig hijackings. When undercover cop Brian O'Conner infiltrates Toretto's iconoclastic crew, he falls for Toretto's sister and must choose a side: the gang or the LAPD",
+    "tmdb_id": 9799,
+    "image": "https://image.tmdb.org/t/p/w500/gqY0ITBgT7A82poL9jv851qdnIb.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 107,
+  "fields": {
+    "title": "The Fifth Element",
+    "release_date": "1997-05-07",
+    "description": "In 2257, a taxi driver is unintentionally given the task of saving a young girl who is part of the key that will ensure the survival of humanity.",
+    "tmdb_id": 18,
+    "image": "https://image.tmdb.org/t/p/w500/fPtlCO1yQtnoLHOwKtWz7db6RGU.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 108,
+  "fields": {
+    "title": "The Godfather",
+    "release_date": "1972-03-14",
+    "description": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would",
+    "tmdb_id": 238,
+    "image": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 109,
+  "fields": {
+    "title": "The Godfather: Part II",
+    "release_date": "1974-12-20",
+    "description": "In the continuing saga of the Corleone crime family, a young Vito Corleone grows up in Sicily and in 1910s New York. In the 1950s, Michael Corleone attempts to expand the family business into Las Vegas, Hollywood and Cuba.",
+    "tmdb_id": 240,
+    "image": "https://image.tmdb.org/t/p/w500/hek3koDUyRQk7FIhPXsa6mT2Zc3.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 110,
+  "fields": {
+    "title": "The Green Mile",
+    "release_date": "1999-12-10",
+    "description": "A supernatural tale set on death row in a Southern prison, where gentle giant John Coffey possesses the mysterious power to heal people's ailments. When the cellblock's head guard, Paul Edgecomb, recognizes Coffey's miraculous gift, he tries desperately t",
+    "tmdb_id": 497,
+    "image": "https://image.tmdb.org/t/p/w500/o0lO84GI7qrG6XFvtsPOSV7CTNa.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 111,
+  "fields": {
+    "title": "The Hangover",
+    "release_date": "2009-06-05",
+    "description": "When three friends finally come to after a raucous night of bachelor-party revelry, they find a baby in the closet and a tiger in the bathroom. But they can't seem to locate their best friend, Doug ‚Äì who's supposed to be tying the knot. Launching a fran",
+    "tmdb_id": 18785,
+    "image": "https://image.tmdb.org/t/p/w500/A0uS9rHR56FeBtpjVki16M5xxSW.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 112,
+  "fields": {
+    "title": "The Incredible Hulk",
+    "release_date": "2008-06-12",
+    "description": "Scientist Bruce Banner scours the planet for an antidote to the unbridled force of rage within him: the Hulk. But when the military masterminds who dream of exploiting his powers force him back to civilization, he finds himself coming face to face with a ",
+    "tmdb_id": 1724,
+    "image": "https://image.tmdb.org/t/p/w500/gKzYx79y0AQTL4UAk1cBQJ3nvrm.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 113,
+  "fields": {
+    "title": "The Incredibles",
+    "release_date": "2004-11-05",
+    "description": "Bob Parr has given up his superhero days to log in time as an insurance adjuster and raise his three children with his formerly heroic wife in suburbia. But when he receives a mysterious assignment, it's time to get back into costume.",
+    "tmdb_id": 9806,
+    "image": "https://image.tmdb.org/t/p/w500/2LqaLgk4Z226KkgPJuiOQ58wvrm.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 114,
+  "fields": {
+    "title": "The Lion King",
+    "release_date": "1994-06-23",
+    "description": "A young lion cub named Simba can't wait to be king. But his uncle craves the title for himself and will stop at nothing to get it.",
+    "tmdb_id": 8587,
+    "image": "https://image.tmdb.org/t/p/w500/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 115,
+  "fields": {
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "release_date": "2001-12-18",
+    "description": "Young hobbit Frodo Baggins, after inheriting a mysterious ring from his uncle Bilbo, must leave his home in order to keep it from falling into the hands of its evil creator. Along the way, a fellowship is formed to protect the ringbearer and make sure tha",
+    "tmdb_id": 120,
+    "image": "https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 116,
+  "fields": {
+    "title": "The Lord of the Rings: The Return of the King",
+    "release_date": "2003-12-01",
+    "description": "Aragorn is revealed as the heir to the ancient kings as he, Gandalf and the other members of the broken fellowship struggle to save Gondor from Sauron's forces. Meanwhile, Frodo and Sam bring the ring closer to the heart of Mordor, the dark lord's realm.",
+    "tmdb_id": 122,
+    "image": "https://image.tmdb.org/t/p/w500/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 117,
+  "fields": {
+    "title": "The Lord of the Rings: The Two Towers",
+    "release_date": "2002-12-18",
+    "description": "Frodo and Sam are trekking to Mordor to destroy the One Ring of Power while Gimli, Legolas and Aragorn search for the orc-captured Merry and Pippin. All along, nefarious wizard Saruman awaits the Fellowship members at the Orthanc Tower in Isengard.",
+    "tmdb_id": 121,
+    "image": "https://image.tmdb.org/t/p/w500/5VTN0pR8gcqV3EPUHHfMGnJYN9L.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 118,
+  "fields": {
+    "title": "The Matrix",
+    "release_date": "1999-03-30",
+    "description": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.",
+    "tmdb_id": 603,
+    "image": "https://image.tmdb.org/t/p/w500/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 119,
+  "fields": {
+    "title": "The Matrix Reloaded",
+    "release_date": "2003-05-15",
+    "description": "Six months after the events depicted in The Matrix, Neo has proved to be a good omen for the free humans, as more and more humans are being freed from the matrix and brought to Zion, the one and only stronghold of the Resistance.  Neo himself has discover",
+    "tmdb_id": 604,
+    "image": "https://image.tmdb.org/t/p/w500/9TGHDvWrqKBzwDxDodHYXEmOE6J.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 120,
+  "fields": {
+    "title": "The Matrix Revolutions",
+    "release_date": "2003-11-05",
+    "description": "The human city of Zion defends itself against the massive invasion of the machines as Neo fights to end the war at another front while also opposing the rogue Agent Smith.",
+    "tmdb_id": 605,
+    "image": "https://image.tmdb.org/t/p/w500/t1wm4PgOQ8e4z1C6tk1yDNrps4T.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 121,
+  "fields": {
+    "title": "The Notebook",
+    "release_date": "2004-06-25",
+    "description": "An epic love story centered around an older man who reads aloud to a woman with Alzheimer's. From a faded notebook, the old man's words bring to life the story about a couple who is separated by World War II, and is then passionately reunited, seven years",
+    "tmdb_id": 11036,
+    "image": "https://image.tmdb.org/t/p/w500/rNzQyW4f8B8cQeg7Dgj3n6eT5k9.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 122,
+  "fields": {
+    "title": "The Prestige",
+    "release_date": "2006-10-19",
+    "description": "A mysterious story of two magicians whose intense rivalry leads them on a life-long battle for supremacy -- full of obsession, deceit and jealousy with dangerous and deadly consequences.",
+    "tmdb_id": 1124,
+    "image": "https://image.tmdb.org/t/p/w500/bdN3gXuIZYaJP7ftKK2sU0nPtEA.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 123,
+  "fields": {
+    "title": "The Shawshank Redemption",
+    "release_date": "1994-09-23",
+    "description": "Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne c",
+    "tmdb_id": 278,
+    "image": "https://image.tmdb.org/t/p/w500/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 124,
+  "fields": {
+    "title": "The Shining",
+    "release_date": "1980-05-22",
+    "description": "Jack Torrance accepts a caretaker job at the Overlook Hotel, where he, along with his wife Wendy and their son Danny, must live isolated from the rest of the world for the winter. But they aren't prepared for the madness that lurks within.",
+    "tmdb_id": 694,
+    "image": "https://image.tmdb.org/t/p/w500/fFYAlrOudDJRYs8tvuHbUk0OGdL.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 125,
+  "fields": {
+    "title": "The Silence of the Lambs",
+    "release_date": "1991-02-01",
+    "description": "FBI trainee, Clarice Starling ventures into a maximum-security asylum to pick the diseased brain of Hannibal Lecter, a psychiatrist turned homicidal cannibal. Starling needs clues to help her capture a serial killer. but her Faustian relationship with Lec",
+    "tmdb_id": 274,
+    "image": "https://image.tmdb.org/t/p/w500/uS9m8OBk1A8eM9I042bx8XXpqAq.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 126,
+  "fields": {
+    "title": "The Sixth Sense",
+    "release_date": "1999-08-06",
+    "description": "A psychological thriller about an eight year old boy named Cole Sear who believes he can see into the world of the dead. A child psychologist named Malcolm Crowe comes to Cole to help him deal with his problem, learning that he really can see ghosts of de",
+    "tmdb_id": 745,
+    "image": "https://image.tmdb.org/t/p/w500/gKoJ2k3qssE1PjV7pss2YqSIoT6.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 127,
+  "fields": {
+    "title": "The Social Network",
+    "release_date": "2010-09-30",
+    "description": "On a fall night in 2003, Harvard undergrad and computer programming genius Mark Zuckerberg sits down at his computer and heatedly begins working on a new idea. In a fury of blogging and programming, what begins in his dorm room as a small site among frien",
+    "tmdb_id": 37799,
+    "image": "https://image.tmdb.org/t/p/w500/n0ybibhJtQ5icDqTp8eRytcIHJx.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 128,
+  "fields": {
+    "title": "The Terminator",
+    "release_date": "1984-10-26",
+    "description": "In the post-apocalyptic future, reigning tyrannical supercomputers teleport a cyborg assassin known as the \"Terminator\" back to 1984 to kill Sarah Connor, whose unborn son is destined to lead insurgents against 21st century mechanical hegemony. Meanwhile,",
+    "tmdb_id": 218,
+    "image": "https://image.tmdb.org/t/p/w500/hzXSE66v6KthZ8nPoLZmsi2G05j.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 129,
+  "fields": {
+    "title": "The Truman Show",
+    "release_date": "1998-06-04",
+    "description": "Truman Burbank is the star of \"The Truman Show\", a 24-hour-a-day \"reality\" TV show that broadcasts every aspect of his life -- live and in color -- without his knowledge. His entire life has been an unending soap opera for consumption by the rest of the w",
+    "tmdb_id": 37165,
+    "image": "https://image.tmdb.org/t/p/w500/vuza0WqY239yBXOadKlGwJsZJFE.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 130,
+  "fields": {
+    "title": "The Usual Suspects",
+    "release_date": "1995-07-19",
+    "description": "Held in an L.A. interrogation room, Verbal Kint attempts to convince the feds that a mythic crime lord, Keyser Soze, not only exists, but was also responsible for drawing him and his four partners into a multi-million dollar heist that ended with an explo",
+    "tmdb_id": 629,
+    "image": "https://image.tmdb.org/t/p/w500/rWbsxdwF9qQzpTPCLmDfVnVqTK1.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 131,
+  "fields": {
+    "title": "Titanic",
+    "release_date": "1997-11-18",
+    "description": "84 years later, a 101-year-old woman named Rose DeWitt Bukater tells the story to her granddaughter Lizzy Calvert, Brock Lovett, Lewis Bodine, Bobby Buell and Anatoly Mikailavich on the Keldysh about her life set in April 10th 1912, on a ship called Titan",
+    "tmdb_id": 597,
+    "image": "https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 132,
+  "fields": {
+    "title": "Toy Story",
+    "release_date": "1995-10-30",
+    "description": "Led by Woody, Andy's toys live happily in his room until Andy's birthday brings Buzz Lightyear onto the scene. Afraid of losing his place in Andy's heart, Woody plots against Buzz. But when circumstances separate Buzz and Woody from their owner, the duo e",
+    "tmdb_id": 862,
+    "image": "https://image.tmdb.org/t/p/w500/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 133,
+  "fields": {
+    "title": "Toy Story 2",
+    "release_date": "1999-10-30",
+    "description": "Andy heads off to Cowboy Camp, leaving his toys to their own devices. Things shift into high gear when an obsessive toy collector named Al McWhiggen, owner of Al's Toy Barn kidnaps Woody. Andy's toys mount a daring rescue mission, Buzz Lightyear meets his",
+    "tmdb_id": 863,
+    "image": "https://image.tmdb.org/t/p/w500/yFWQkz2ynjwsazT6xQiIXEUsyuh.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 134,
+  "fields": {
+    "title": "Toy Story 3",
+    "release_date": "2010-06-16",
+    "description": "Woody, Buzz, and the rest of Andy's toys haven't been played with in years. With Andy about to go to college, the gang find themselves accidentally left at a nefarious day care center. The toys must band together to escape and return home to Andy.",
+    "tmdb_id": 10193,
+    "image": "https://image.tmdb.org/t/p/w500/AbbXspMOwdvwWZgVN0nabZq03Ec.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 135,
+  "fields": {
+    "title": "Transformers",
+    "release_date": "2007-06-27",
+    "description": "Young teenager, Sam Witwicky becomes involved in the ancient struggle between two extraterrestrial factions of transforming robots ‚Äì the heroic Autobots and the evil Decepticons. Sam holds the clue to unimaginable power and the Decepticons will stop at ",
+    "tmdb_id": 1858,
+    "image": "https://image.tmdb.org/t/p/w500/1P7w3AImoEOWJX7nn3fdaKDfEQA.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 136,
+  "fields": {
+    "title": "Up",
+    "release_date": "2009-05-13",
+    "description": "Carl Fredricksen spent his entire life dreaming of exploring the globe and experiencing life to its fullest. But at age 78, life seems to have passed him by, until a twist of fate (and a persistent 8-year old Wilderness Explorer named Russell) gives him a",
+    "tmdb_id": 14160,
+    "image": "https://image.tmdb.org/t/p/w500/mFvoEwSfLqbcWwFsDjQebn9bzFe.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 137,
+  "fields": {
+    "title": "V for Vendetta",
+    "release_date": "2006-03-15",
+    "description": "In a world in which Great Britain has become a fascist state, a masked vigilante known only as 'V' conducts guerrilla warfare against the oppressive British government. When 'V' rescues a young woman from the secret police, he finds in her an ally with wh",
+    "tmdb_id": 752,
+    "image": "https://image.tmdb.org/t/p/w500/1avD1JeaRiJX5M4ahPdZPypGoGN.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 138,
+  "fields": {
+    "title": "WALL¬∑E",
+    "release_date": "2008-06-22",
+    "description": "WALL¬∑E is the last robot left on an Earth that has been overrun with garbage and all humans have fled to outer space. For 700 years he has continued to try and clean up the mess, but has developed some rather interesting human-like qualities. When a ship",
+    "tmdb_id": 10681,
+    "image": "https://image.tmdb.org/t/p/w500/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 139,
+  "fields": {
+    "title": "X-Men",
+    "release_date": "2000-07-13",
+    "description": "Two mutants, Rogue and Wolverine, come to a private academy for their kind whose resident superhero team, the X-Men, must oppose a terrorist organization with similar powers.",
+    "tmdb_id": 36657,
+    "image": "https://image.tmdb.org/t/p/w500/bRDAc4GogyS9ci3ow7UnInOcriN.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 140,
+  "fields": {
+    "title": "X-Men Origins: Wolverine",
+    "release_date": "2009-04-28",
+    "description": "After seeking to live a normal life, Logan sets out to avenge the death of his girlfriend by undergoing the mutant Weapon X program and becoming Wolverine.",
+    "tmdb_id": 2080,
+    "image": "https://image.tmdb.org/t/p/w500/yj8LbTju1p7CUJg7US2unSBk33s.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 141,
+  "fields": {
+    "title": "X-Men: The Last Stand",
+    "release_date": "2006-05-24",
+    "description": "When a cure is found to treat mutations, lines are drawn amongst the X-Men and The Brotherhood, a band of powerful mutants organized under Xavier's former ally, Magneto.",
+    "tmdb_id": 36668,
+    "image": "https://image.tmdb.org/t/p/w500/a2xicU8DpKtRizOHjQLC1JyCSRS.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 142,
+  "fields": {
+    "title": "X2",
+    "release_date": "2003-04-24",
+    "description": "Professor Charles Xavier and his team of genetically gifted superheroes face a rising tide of anti-mutant sentiment led by Col. William Stryker. Storm, Wolverine and Jean Grey must join their usual nemeses ‚Äì  Magneto and Mystique ‚Äì to unhinge Stryker'",
+    "tmdb_id": 36658,
+    "image": "https://image.tmdb.org/t/p/w500/rtrd4qieMAhoUshu83Vi1GazM1O.jpg",
+    "price": "8.00"
+  }
+},
+{
+  "model": "GT_Movies_Store.movie",
+  "pk": 143,
+  "fields": {
+    "title": "Zombieland",
+    "release_date": "2009-10-07",
+    "description": "Columbus has made a habit of running from what scares him. Tallahassee doesn't have fears. If he did, he'd kick their ever-living ass. In a world overrun by zombies, these two are perfectly evolved survivors. But now, they're about to stare down the most ",
+    "tmdb_id": 19908,
+    "image": "https://image.tmdb.org/t/p/w500/dUkAmAyPVqubSBNRjRqCgHggZcK.jpg",
+    "price": "8.00"
+  }
+}
+]

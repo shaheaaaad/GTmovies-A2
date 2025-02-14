@@ -12,7 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # ---------------------- Security Settings ----------------------
 SECRET_KEY = os.environ.get("SECRET_KEY", "default-insecure-key")  # ✅ Secure fallback
-DEBUG = os.environ.get("DEBUG", "False") == "True"  # ✅ Default to False in production
+DEBUG = os.environ.get("DEBUG", "True") == "True"  # ✅ Default to False in production
 
 # ✅ Set allowed hosts securely for production
 ALLOWED_HOSTS = ['*']
@@ -86,7 +86,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # ---------------------- Localization ----------------------
 LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'EST'
 USE_I18N = True
 USE_TZ = True
 
