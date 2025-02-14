@@ -65,7 +65,7 @@ Then visit `http://127.0.0.1:8000/` in your browser.
 ## License
 This project is for educational purposes under CS 2340 at Georgia Tech.
 
-##Learn More 
+**##Learn More **
 - Portfolio: https://elephant-reed-85n3.squarespace.com/
 - password: password
 
