@@ -12,8 +12,8 @@ To set up and run the project locally, follow these steps:
 
 ### 1. Clone the Repository
 ```sh
-git clone <your-repo-link>
-cd <your-repo-name>
+git clone https://github.com/shaheaaaad/GTmovies-A2.git
+cd GTmovies-A2
 ```
 
 ### 2. Set Up a Virtual Environment
